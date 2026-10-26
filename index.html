@@ -214,21 +214,28 @@ p{margin:0 0 1em}
 .doc p{color:var(--tinta-2);font-size:15px}
 .pendencia{margin-top:auto;font-size:12.5px;line-height:1.5;color:#8A3B12;background:#FBEFE6;border:1px dashed #D9A07A;border-radius:10px;padding:10px 12px}
 .pendencia b{font-weight:600;letter-spacing:.04em}
-.estrutura{display:grid;grid-template-columns:.75fr 1.25fr;gap:clamp(24px,4vw,56px);margin-top:clamp(56px,7vw,96px);align-items:start}
-.estrutura h3{font-size:clamp(28px,3vw,38px);margin-bottom:16px}
-.endereco{margin-top:28px;background:var(--breu);color:var(--claro);border-radius:var(--raio-g);padding:26px 28px;font-style:normal}
-.endereco strong{display:block;font-family:var(--serif);font-weight:500;font-size:20px;color:var(--ouro-luz);margin-bottom:8px}
-.endereco span{display:block;color:var(--claro-2)}
-.endereco a{display:inline-flex;align-items:center;gap:8px;margin-top:16px;font-size:14px;color:var(--claro);text-underline-offset:4px}
-.galeria{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:120px;gap:12px}
-.galeria figure{margin:0;border-radius:var(--raio);overflow:hidden;background:var(--papel-2)}
-.galeria img{width:100%;height:100%;object-fit:cover}
-.g1{grid-column:1/5;grid-row:1/4}
-.g2{grid-column:5/7;grid-row:1/3}
-.g3{grid-column:5/7;grid-row:3/5}
-.g4{grid-column:1/3;grid-row:4/6}
-.g5{grid-column:3/5;grid-row:4/6}
-.g6{grid-column:5/7;grid-row:5/6}
+.estrutura{margin-top:clamp(56px,7vw,96px)}
+.estrutura-head{text-align:center;max-width:640px;margin:0 auto clamp(28px,3.5vw,44px)}
+.estrutura-head h3{font-size:clamp(28px,3vw,38px);margin-bottom:12px}
+.estrutura-head .lead{margin:0}
+.carrossel{position:relative}
+.trilho{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;-webkit-overflow-scrolling:touch;border-radius:var(--raio-g)}
+.trilho::-webkit-scrollbar{display:none}
+.trilho:focus-visible{outline:2px solid var(--ouro);outline-offset:4px}
+.slide{flex:0 0 auto;height:clamp(300px,34vw,440px);margin:0;border-radius:var(--raio-g);overflow:hidden;scroll-snap-align:start;background:var(--papel-2)}
+.slide img{height:100%;width:auto;max-width:none;object-fit:cover}
+.car-controles{display:flex;align-items:center;justify-content:center;gap:18px;margin-top:22px}
+.car-btn{width:46px;height:46px;border-radius:50%;border:1px solid var(--linha);background:var(--papel);display:grid;place-items:center;cursor:pointer;color:var(--tinta);transition:background .2s,border-color .2s,color .2s}
+.car-btn:hover{background:var(--tinta);color:var(--papel);border-color:var(--tinta)}
+.car-btn[disabled]{opacity:.35;cursor:default;background:var(--papel);color:var(--tinta);border-color:var(--linha)}
+.car-pontos{display:flex;gap:8px}
+.car-pontos i{width:7px;height:7px;border-radius:50%;background:var(--linha);transition:background .2s,width .2s}
+.car-pontos i.on{background:var(--ouro);width:22px;border-radius:4px}
+.estrutura-base{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:20px 28px;margin-top:clamp(32px,4vw,48px)}
+.endereco{background:var(--breu);color:var(--claro);border-radius:var(--raio-g);padding:22px 28px;font-style:normal;display:grid;grid-template-columns:auto auto;gap:2px 28px;align-items:center}
+.endereco strong{grid-row:1/3;font-family:var(--serif);font-weight:500;font-size:20px;color:var(--ouro-luz);padding-right:28px;border-right:1px solid var(--linha-escura)}
+.endereco span{display:block;color:var(--claro-2);font-size:14.5px}
+.endereco a{grid-column:1/-1;justify-self:start;display:inline-flex;align-items:center;gap:8px;margin-top:12px;font-size:14px;color:var(--claro);text-underline-offset:4px}
 
 /* ---------- 07 formulário ---------- */
 .contato{overflow:hidden}
@@ -335,7 +342,7 @@ p{margin:0 0 1em}
 @media (max-width:900px){
   :root{--header:64px}
   .topo .logo img{height:34px}
-  .hero-grid,.sec-head,.derm-feature,.tec-grid,.nutri-grid,.proc-grid,.estrutura,.contato-grid{grid-template-columns:1fr}
+  .hero-grid,.sec-head,.derm-feature,.tec-grid,.nutri-grid,.proc-grid,.contato-grid{grid-template-columns:1fr}
   .hero h1{max-width:none}
   .hero-foto{justify-self:center;width:min(100%,420px);margin-top:12px}
   .hero-foto figcaption{left:12px}
@@ -349,10 +356,10 @@ p{margin:0 0 1em}
   .docs{grid-template-columns:1fr}
   .doc{grid-template-columns:.9fr 1.1fr}
   .doc .foto{aspect-ratio:auto;min-height:280px}
-  .galeria{grid-template-columns:1fr 1fr;grid-auto-rows:150px}
-  .g1{grid-column:1/3;grid-row:auto / span 2}
-  .g2,.g3,.g4,.g5{grid-column:auto;grid-row:auto / span 1}
-  .g6{display:none}
+  .slide{height:300px}
+  .endereco{grid-template-columns:1fr}
+  .endereco strong{grid-row:auto;border-right:0;padding-right:0;margin-bottom:6px}
+  .estrutura-base .btn{width:100%}
 }
 @media (max-width:640px){
   body{font-size:15.5px}
@@ -602,26 +609,37 @@ p{margin:0 0 1em}
     </div>
 
     <div class="estrutura">
-      <div class="rv">
+      <div class="estrutura-head rv">
         <h3>A Supreme em Goiânia</h3>
         <p class="lead">A clínica está no Edifício New Times Square, no Setor Bueno.</p>
+      </div>
+
+      <div class="carrossel rv" aria-roledescription="carrossel" aria-label="Fotos da clínica">
+        <div class="trilho" id="trilho" tabindex="0">
+          <figure class="slide"><img src="images/recepcao.webp" alt="Recepção da Supreme com o monograma da marca" width="1600" height="1068" loading="lazy"></figure>
+          <figure class="slide"><img src="images/predio.webp" alt="Edifício New Times Square" width="700" height="965" loading="lazy"></figure>
+          <figure class="slide"><img src="images/consultorio.webp" alt="Consultório com vista para a cidade" width="1400" height="935" loading="lazy"></figure>
+          <figure class="slide"><img src="images/sala-tecnologia.webp" alt="Sala de tecnologias da Supreme" width="800" height="1540" loading="lazy" style="object-position:50% 40%"></figure>
+          <figure class="slide"><img src="images/poltronas.webp" alt="Sala com poltronas de atendimento" width="1200" height="801" loading="lazy"></figure>
+          <figure class="slide"><img src="images/quadros.webp" alt="Detalhe da decoração da clínica" width="1200" height="801" loading="lazy"></figure>
+          <figure class="slide"><img src="images/detalhe-decor.webp" alt="Detalhe da decoração com peças douradas" width="800" height="1199" loading="lazy"></figure>
+          <figure class="slide"><img src="images/vela.webp" alt="Ambiente com iluminação suave" width="1000" height="668" loading="lazy"></figure>
+        </div>
+        <div class="car-controles">
+          <button type="button" class="car-btn" id="car-ant" aria-label="Foto anterior"><svg width="16" height="16"><use href="#i-volta"/></svg></button>
+          <div class="car-pontos" id="car-pontos" aria-hidden="true"></div>
+          <button type="button" class="car-btn" id="car-prox" aria-label="Próxima foto"><svg width="16" height="16" style="transform:scaleX(-1)"><use href="#i-volta"/></svg></button>
+        </div>
+      </div>
+
+      <div class="estrutura-base rv">
         <address class="endereco">
           <strong>Ed. New Times Square</strong>
           <span>Av. T-10 esq. Rua T-27 · Sala 1810</span>
           <span>Setor Bueno · Goiânia, GO</span>
           <a href="https://www.google.com/maps/search/?api=1&query=Ed.+New+Times+Square+Av.+T-10+Setor+Bueno+Goi%C3%A2nia" target="_blank" rel="noopener"><svg width="16" height="16"><use href="#i-pin"/></svg>Abrir no mapa</a>
         </address>
-        <div class="cta-row" style="margin-top:28px">
-          <a class="btn btn-ouro" href="#contato" data-area="">Solicitar avaliação <span class="seta"><svg><use href="#i-seta"/></svg></span></a>
-        </div>
-      </div>
-      <div class="galeria rv" aria-label="Fotos da clínica">
-        <figure class="g1"><img src="images/recepcao.webp" alt="Recepção da Supreme com o monograma da marca" width="1600" height="1068" loading="lazy"></figure>
-        <figure class="g2"><img src="images/predio.webp" alt="Edifício New Times Square" width="700" height="965" loading="lazy"></figure>
-        <figure class="g3"><img src="images/sala-tecnologia.webp" alt="Sala de tecnologias da Supreme" width="800" height="1540" loading="lazy" style="object-position:50% 40%"></figure>
-        <figure class="g4"><img src="images/consultorio.webp" alt="Consultório com vista para a cidade" width="1400" height="935" loading="lazy"></figure>
-        <figure class="g5"><img src="images/poltronas.webp" alt="Sala com poltronas de atendimento" width="1200" height="801" loading="lazy"></figure>
-        <figure class="g6"><img src="images/quadros.webp" alt="Detalhe da decoração da clínica" width="1200" height="801" loading="lazy"></figure>
+        <a class="btn btn-ouro" href="#contato" data-area="">Solicitar avaliação <span class="seta"><svg><use href="#i-seta"/></svg></span></a>
       </div>
     </div>
   </div>
@@ -913,6 +931,28 @@ p{margin:0 0 1em}
   // entrada suave
   const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }), {rootMargin:'0px 0px -8% 0px'});
   document.querySelectorAll('.rv').forEach(el => io.observe(el));
+
+  // carrossel da estrutura
+  const tr = $('#trilho'), pts = $('#car-pontos'), ant = $('#car-ant'), prox = $('#car-prox');
+  const slides = [...tr.querySelectorAll('.slide')];
+  pts.innerHTML = slides.map(() => '<i></i>').join('');
+  function atualiza(){
+    const max = tr.scrollWidth - tr.clientWidth;
+    ant.disabled = tr.scrollLeft <= 4; prox.disabled = tr.scrollLeft >= max - 4;
+    let idx = 0, menor = Infinity;
+    slides.forEach((sl,i) => { const d = Math.abs(sl.offsetLeft - tr.offsetLeft - tr.scrollLeft); if (d < menor) { menor = d; idx = i; } });
+    if (tr.scrollLeft >= max - 4) idx = slides.length - 1;
+    [...pts.children].forEach((p,i) => p.classList.toggle('on', i === idx));
+  }
+  const vai = dir => {
+    const x = tr.scrollLeft, alvo = dir > 0 ? slides.find(sl => sl.offsetLeft - tr.offsetLeft > x + 8) : [...slides].reverse().find(sl => sl.offsetLeft - tr.offsetLeft < x - 8);
+    tr.scrollTo({left: alvo ? alvo.offsetLeft - tr.offsetLeft : (dir > 0 ? tr.scrollWidth : 0)});
+  };
+  ant.addEventListener('click', () => vai(-1)); prox.addEventListener('click', () => vai(1));
+  tr.addEventListener('keydown', e => { if (e.key === 'ArrowRight') { e.preventDefault(); vai(1); } if (e.key === 'ArrowLeft') { e.preventDefault(); vai(-1); } });
+  tr.addEventListener('scroll', () => requestAnimationFrame(atualiza), {passive:true});
+  addEventListener('resize', atualiza); tr.querySelectorAll('img').forEach(i => i.addEventListener('load', atualiza));
+  atualiza();
 
   $('#ano').textContent = new Date().getFullYear();
 })();
