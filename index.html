@@ -146,7 +146,7 @@ p{margin:0 0 1em}
 
 /* ---------- 03 tecnologias ---------- */
 .tec{overflow:hidden}
-.tec-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(36px,5vw,72px);align-items:start}
+.tec-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(36px,5vw,72px);align-items:stretch}
 .tec-grupos{margin-top:28px;border-top:1px solid var(--linha-escura)}
 .grupo{display:grid;grid-template-columns:120px 1fr;gap:20px;padding:20px 0;border-bottom:1px solid var(--linha-escura)}
 .grupo h3{font-size:17px;color:var(--ouro-luz);font-style:italic}
@@ -155,11 +155,8 @@ p{margin:0 0 1em}
 .grupo li{font-size:14px;padding:7px 14px;border-radius:999px;background:rgba(246,243,238,.06);border:1px solid rgba(246,243,238,.12);white-space:nowrap}
 .grupo li .sep{display:none}
 .tec .cta-row{margin-top:32px}
-.tec-fotos{position:sticky;top:calc(var(--header) + 32px);display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.tec-fotos figure{margin:0;border-radius:var(--raio-g);overflow:hidden;background:var(--breu-2)}
-.tec-fotos figure img{width:100%;height:100%;object-fit:cover}
-.tec-fotos figure:nth-child(1){aspect-ratio:3/5;margin-top:48px}
-.tec-fotos figure:nth-child(2){aspect-ratio:3/5}
+.tec-foto{margin:0;border-radius:var(--raio-g);overflow:hidden;background:var(--breu-2);min-height:420px}
+.tec-foto img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
 
 /* ---------- 04 nutrologia ---------- */
 .nutri{background:var(--papel-2)}
@@ -338,7 +335,7 @@ p{margin:0 0 1em}
   .hero h1{max-width:none}
   .hero-foto{justify-self:center;width:min(100%,420px);margin-top:12px}
   .hero-foto figcaption{left:12px}
-  .tec-fotos{max-width:520px;position:relative;top:0}
+  .tec-foto{min-height:0;aspect-ratio:4/3.4;max-width:560px}
   .nutri-foto{aspect-ratio:4/4.4;max-width:520px}
   .rodape-grid{grid-template-columns:1fr 1fr}
 }
@@ -514,10 +511,7 @@ p{margin:0 0 1em}
         <a class="btn btn-ouro" href="#contato" data-area="tec">Solicitar avaliação <span class="seta"><svg><use href="#i-seta"/></svg></span></a>
       </div>
     </div>
-    <div class="tec-fotos rv" aria-hidden="false">
-      <figure><img src="images/oligio.webp" alt="Atendimento com tecnologia Oligio X" width="700" height="1239" loading="lazy"></figure>
-      <figure><img src="images/fotona.webp" alt="Atendimento com laser Fotona" width="700" height="1642" loading="lazy"></figure>
-    </div>
+    <figure class="tec-foto rv"><img src="images/oligio.webp" alt="Atendimento com tecnologia Oligio X" width="700" height="1239" loading="lazy"></figure>
   </div>
 </section>
 
