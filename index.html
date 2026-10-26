@@ -1,0 +1,921 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clínica Supreme · Dermatologia, nutrologia e tecnologias em Goiânia</title>
+<meta name="description" content="A Supreme reúne diferentes áreas de atendimento em uma mesma estrutura no Setor Bueno, em Goiânia.">
+<!-- PROTÓTIPO: não indexar até a publicação definitiva -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#15120F">
+<link rel="icon" type="image/png" href="images/brand/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="images/fundadores.webp">
+<style>
+/* ============================================================
+   TOKENS — identidade Supreme (PDF institucional + LP Full Body)
+   Dourado oficial do logo: #A77F1F. Para texto sobre claro usa-se
+   a variação escurecida (--ouro-txt), que passa contraste AA.
+   ============================================================ */
+:root{
+  --papel:#F8F5F0;
+  --papel-2:#F1ECE3;
+  --branco:#FFFFFF;
+  --tinta:#17130F;
+  --tinta-2:#5C5348;
+  --tinta-3:#8A8076;
+  --ouro:#A77F1F;
+  --ouro-txt:#7A5C16;
+  --ouro-luz:#E3CFA0;
+  --ouro-claro:#C9A96A;
+  --breu:#15120F;
+  --breu-2:#201B16;
+  --claro:#F6F3EE;
+  --claro-2:#C9BFB2;
+  --linha:#E3DBCF;
+  --linha-escura:rgba(246,243,238,.14);
+  --grad-cta:linear-gradient(135deg,#7E5F1C 0%,#B08D45 52%,#8A6A22 100%);
+  --erro:#A3341F;
+  --serif:"Playfair Display",Georgia,"Times New Roman",serif;
+  --sans:"Poppins",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --raio:14px;
+  --raio-g:22px;
+  --max:1200px;
+  --gut:clamp(20px,4vw,40px);
+  --sec:clamp(64px,9vw,112px);
+  --header:72px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header) + 12px);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--papel);color:var(--tinta);font-family:var(--sans);font-weight:300;font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--ouro-claro);outline-offset:3px;border-radius:6px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
+section{position:relative}
+
+/* ---------- tipografia ---------- */
+.kicker{display:inline-flex;align-items:center;gap:12px;font-size:12px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--ouro-txt);margin:0 0 20px}
+.kicker::before{content:"";width:28px;height:1px;background:currentColor;opacity:.7}
+.dark .kicker{color:var(--ouro-luz)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.14;margin:0;letter-spacing:-.01em}
+h1{font-size:clamp(36px,5.2vw,64px)}
+h2{font-size:clamp(30px,3.9vw,48px)}
+h3{font-size:clamp(20px,1.9vw,24px);line-height:1.25}
+h1 em,h2 em{font-style:italic;color:var(--ouro-txt)}
+.dark h1 em,.dark h2 em{color:var(--ouro-luz)}
+p{margin:0 0 1em}
+.lead{font-size:clamp(16px,1.35vw,18px);color:var(--tinta-2)}
+.dark{background:var(--breu);color:var(--claro)}
+.dark .lead{color:var(--claro-2)}
+
+/* ---------- botões ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:52px;padding:14px 28px;border-radius:999px;border:0;font-family:var(--sans);font-size:15px;font-weight:500;letter-spacing:.02em;text-decoration:none;cursor:pointer;transition:transform .2s ease,box-shadow .2s ease,background .2s ease;text-align:center}
+.btn-ouro{background:var(--grad-cta);color:#FFF9EC;box-shadow:0 10px 26px -12px rgba(126,95,28,.75)}
+.btn-ouro:hover{transform:translateY(-2px);box-shadow:0 16px 30px -12px rgba(126,95,28,.85)}
+.btn-ouro .seta{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,.18)}
+.btn-linha{background:transparent;color:var(--tinta);box-shadow:inset 0 0 0 1px var(--tinta)}
+.btn-linha:hover{background:var(--tinta);color:var(--papel)}
+.dark .btn-linha{color:var(--claro);box-shadow:inset 0 0 0 1px rgba(246,243,238,.5)}
+.dark .btn-linha:hover{background:var(--claro);color:var(--breu)}
+.btn svg{width:14px;height:14px}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.cta-center{display:flex;justify-content:center;margin-top:clamp(40px,5vw,56px)}
+
+/* ---------- header ---------- */
+.topo{position:fixed;inset:0 0 auto 0;z-index:50;height:var(--header);background:rgba(21,18,15,.86);backdrop-filter:saturate(140%) blur(12px);-webkit-backdrop-filter:saturate(140%) blur(12px);border-bottom:1px solid var(--linha-escura);color:var(--claro)}
+.topo .wrap{height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.topo .logo img{height:40px;width:auto}
+.topo nav ul{display:flex;gap:clamp(16px,2.2vw,30px);list-style:none;margin:0;padding:0}
+.topo nav a{white-space:nowrap;font-size:13.5px;font-weight:400;text-decoration:none;color:var(--claro-2);letter-spacing:.02em;transition:color .2s}
+.topo nav a:hover{color:var(--ouro-luz)}
+.topo .btn{min-height:42px;padding:10px 20px;font-size:13.5px}
+
+/* ---------- hero ---------- */
+.hero{padding:calc(var(--header) + clamp(40px,6vw,84px)) 0 clamp(56px,7vw,96px);overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 70% at 85% 30%,rgba(167,127,31,.20),transparent 70%),radial-gradient(40% 50% at 0% 100%,rgba(167,127,31,.10),transparent 70%);pointer-events:none}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.08fr .92fr;gap:clamp(36px,5vw,72px);align-items:center}
+.hero .marca{display:flex;align-items:center;gap:14px;margin-bottom:26px}
+.hero .marca img{width:26px;height:auto}
+.hero .marca span{font-size:12px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--ouro-luz)}
+.hero h1{margin-bottom:26px;max-width:15ch}
+.hero .lead{max-width:54ch}
+.hero .apoio{font-family:var(--serif);font-style:italic;font-size:clamp(18px,1.6vw,21px);color:var(--claro);border-left:1px solid var(--ouro-claro);padding-left:18px;margin:26px 0 34px;max-width:46ch}
+.hero .local{display:flex;align-items:center;gap:10px;font-size:13.5px;color:var(--claro-2)}
+.hero .local svg{width:16px;height:16px;color:var(--ouro-luz);flex:none}
+.areas{display:flex;flex-wrap:wrap;gap:10px;margin-top:40px;padding-top:28px;border-top:1px solid var(--linha-escura)}
+.areas a{display:inline-flex;align-items:center;gap:10px;padding:10px 18px;border-radius:999px;border:1px solid rgba(227,207,160,.35);font-size:14px;text-decoration:none;color:var(--claro);transition:background .2s,border-color .2s}
+.areas a:hover{background:rgba(227,207,160,.12);border-color:var(--ouro-luz)}
+.areas a .n{font-size:11px;color:var(--ouro-luz);letter-spacing:.1em}
+.areas a.destaque{background:rgba(227,207,160,.14);border-color:var(--ouro-luz)}
+.hero-foto{position:relative;justify-self:end;width:min(100%,460px)}
+.hero-foto .moldura{position:relative;border-radius:240px 240px var(--raio-g) var(--raio-g);overflow:hidden;aspect-ratio:9/13;background:var(--breu-2)}
+.hero-foto .moldura img{width:100%;height:100%;object-fit:cover;object-position:50% 18%}
+.hero-foto::before{content:"";position:absolute;inset:-14px -14px 22px 22px;border:1px solid rgba(201,169,106,.55);border-radius:252px 252px 28px 28px;pointer-events:none}
+.hero-foto figcaption{position:absolute;left:-28px;bottom:36px;background:var(--papel);color:var(--tinta);border-radius:var(--raio);padding:14px 18px;box-shadow:0 20px 40px -18px rgba(0,0,0,.6);font-size:13px;line-height:1.45;max-width:250px}
+.hero-foto figcaption strong{display:block;font-family:var(--serif);font-weight:500;font-size:15px}
+.hero-foto figcaption span{color:var(--tinta-2)}
+
+/* ---------- cabeçalho de seção ---------- */
+.sec{padding:var(--sec) 0}
+.sec-head{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(24px,5vw,72px);align-items:end;margin-bottom:clamp(40px,5vw,64px)}
+.sec-head .lead{margin:0}
+
+/* ---------- 02 dermatologia ---------- */
+.derm{background:var(--papel)}
+.derm-feature{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(24px,3vw,40px);align-items:stretch;margin-bottom:clamp(20px,2.4vw,28px)}
+.derm-feature .foto{border-radius:var(--raio-g);overflow:hidden;min-height:420px;background:var(--papel-2)}
+.derm-feature .foto img{width:100%;height:100%;object-fit:cover;object-position:60% 30%}
+.derm-feature .texto{display:flex;flex-direction:column;gap:clamp(20px,2.4vw,28px)}
+.bloco-rejuv{background:var(--branco);border:1px solid var(--linha);border-radius:var(--raio-g);padding:clamp(26px,3vw,40px)}
+.bloco-rejuv h3{font-size:clamp(24px,2.4vw,30px);margin-bottom:14px}
+.bloco-rejuv p{color:var(--tinta-2);margin:0}
+.bloco-rejuv p+p{margin-top:12px;color:var(--tinta)}
+.natural-lift{position:relative;flex:1;background:var(--breu);color:var(--claro);border-radius:var(--raio-g);padding:clamp(28px,3vw,40px);overflow:hidden}
+.natural-lift::after{content:"";position:absolute;right:-60px;bottom:-60px;width:220px;height:220px;border-radius:50%;border:1px solid rgba(201,169,106,.35)}
+.natural-lift .selo{display:inline-block;font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--ouro-luz);border:1px solid rgba(227,207,160,.4);border-radius:999px;padding:6px 12px;margin-bottom:18px}
+.natural-lift h3{font-size:clamp(30px,3.2vw,40px);font-style:italic;color:var(--ouro-luz);margin-bottom:14px}
+.natural-lift p{color:var(--claro-2);margin:0;max-width:46ch;position:relative;z-index:1}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2vw,24px)}
+.card{background:var(--branco);border:1px solid var(--linha);border-radius:var(--raio-g);padding:clamp(24px,2.6vw,34px);transition:transform .25s ease,box-shadow .25s ease,border-color .25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 24px 40px -28px rgba(23,19,15,.4);border-color:var(--ouro-claro)}
+.card .num{display:block;font-family:var(--serif);font-style:italic;font-size:15px;color:var(--ouro-txt);margin-bottom:22px}
+.card h3{margin-bottom:12px}
+.card p{color:var(--tinta-2);margin:0;font-size:15px}
+.card-foto{position:relative;border-radius:var(--raio-g);overflow:hidden;min-height:240px}
+.card-foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+/* ---------- 03 tecnologias ---------- */
+.tec{overflow:hidden}
+.tec-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(36px,5vw,72px);align-items:start}
+.tec-grupos{margin-top:40px;border-top:1px solid var(--linha-escura)}
+.grupo{display:grid;grid-template-columns:150px 1fr;gap:24px;padding:28px 0;border-bottom:1px solid var(--linha-escura)}
+.grupo h3{font-size:22px;color:var(--ouro-luz);font-style:italic}
+.grupo ul{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
+.grupo li{font-size:14px;padding:7px 14px;border-radius:999px;background:rgba(246,243,238,.06);border:1px solid rgba(246,243,238,.12);white-space:nowrap}
+.grupo li .sep{display:none}
+.tec .cta-row{margin-top:40px}
+.tec-fotos{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.tec-fotos figure{margin:0;border-radius:var(--raio-g);overflow:hidden;background:var(--breu-2)}
+.tec-fotos figure img{width:100%;height:100%;object-fit:cover}
+.tec-fotos figure:nth-child(1){aspect-ratio:3/5;margin-top:64px}
+.tec-fotos figure:nth-child(2){aspect-ratio:3/5}
+
+/* ---------- 04 nutrologia ---------- */
+.nutri{background:var(--papel-2)}
+.nutri-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:clamp(36px,5vw,80px);align-items:center}
+.nutri-foto{position:relative;border-radius:var(--raio-g);overflow:hidden;aspect-ratio:4/5.4;background:var(--papel)}
+.nutri-foto img{width:100%;height:100%;object-fit:cover;object-position:50% 25%}
+.nutri-foto figcaption{position:absolute;left:16px;right:16px;bottom:16px;background:rgba(21,18,15,.78);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);color:var(--claro);border-radius:var(--raio);padding:12px 16px;font-size:13px}
+.nutri-foto figcaption strong{font-family:var(--serif);font-weight:500;font-size:15px}
+.nutri h2{margin-bottom:20px}
+.lista{list-style:none;margin:36px 0 40px;padding:0;border-top:1px solid var(--linha)}
+.lista li{display:grid;grid-template-columns:44px 1fr;gap:12px;padding:20px 0;border-bottom:1px solid var(--linha)}
+.lista .num{font-family:var(--serif);font-style:italic;color:var(--ouro-txt);font-size:15px;padding-top:2px}
+.lista h3{font-size:19px;margin-bottom:4px}
+.lista p{margin:0;color:var(--tinta-2);font-size:15px}
+
+/* ---------- 05 procedimentos + supreme care ---------- */
+.proc{background:var(--papel)}
+.proc .sec-head{grid-template-columns:1fr;max-width:820px;margin-left:auto;margin-right:auto;text-align:center}
+.proc .sec-head .kicker{justify-content:center}
+.proc-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2.4vw,28px)}
+.painel{border-radius:var(--raio-g);overflow:hidden;display:flex;flex-direction:column}
+.painel .foto{aspect-ratio:16/10;overflow:hidden}
+.painel .foto img{width:100%;height:100%;object-fit:cover}
+.painel .corpo{padding:clamp(26px,3vw,40px);display:flex;flex-direction:column;flex:1}
+.painel h3{font-size:clamp(26px,2.6vw,32px);margin-bottom:20px}
+.painel .nota{font-size:14px;margin:22px 0 28px}
+.painel .btn{margin-top:auto;align-self:flex-start}
+.painel-cir{background:var(--branco);border:1px solid var(--linha)}
+.painel-cir .foto img{object-position:50% 35%}
+.painel-cir .nota{color:var(--tinta-2)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
+.chips li{font-size:14.5px;padding:8px 16px;border-radius:999px;background:var(--papel-2);border:1px solid var(--linha)}
+.painel-care{background:var(--breu);color:var(--claro)}
+.painel-care .foto img{object-position:50% 40%}
+.painel-care h3{font-style:italic;color:var(--ouro-luz)}
+.painel-care p{color:var(--claro-2)}
+.painel-care p:first-of-type{color:var(--claro);font-size:17px}
+
+/* ---------- 06 médicos e estrutura ---------- */
+.medicos{background:var(--branco)}
+.docs{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2.4vw,28px)}
+.doc{display:grid;grid-template-columns:.9fr 1.1fr;background:var(--papel);border:1px solid var(--linha);border-radius:var(--raio-g);overflow:hidden}
+.doc .foto{background:var(--papel-2);min-height:360px}
+.doc .foto img{width:100%;height:100%;object-fit:cover;object-position:50% 15%}
+.doc .info{padding:clamp(24px,2.6vw,34px);display:flex;flex-direction:column}
+.doc .area{display:inline-block;align-self:flex-start;font-size:11.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--ouro-txt);border:1px solid rgba(122,92,22,.35);border-radius:999px;padding:5px 12px;margin-bottom:18px}
+.doc h3{font-size:clamp(22px,2.2vw,27px);margin-bottom:12px}
+.doc p{color:var(--tinta-2);font-size:15px}
+.pendencia{margin-top:auto;font-size:12.5px;line-height:1.5;color:#8A3B12;background:#FBEFE6;border:1px dashed #D9A07A;border-radius:10px;padding:10px 12px}
+.pendencia b{font-weight:600;letter-spacing:.04em}
+.estrutura{display:grid;grid-template-columns:.75fr 1.25fr;gap:clamp(24px,4vw,56px);margin-top:clamp(56px,7vw,96px);align-items:start}
+.estrutura h3{font-size:clamp(28px,3vw,38px);margin-bottom:16px}
+.endereco{margin-top:28px;background:var(--breu);color:var(--claro);border-radius:var(--raio-g);padding:26px 28px;font-style:normal}
+.endereco strong{display:block;font-family:var(--serif);font-weight:500;font-size:20px;color:var(--ouro-luz);margin-bottom:8px}
+.endereco span{display:block;color:var(--claro-2)}
+.endereco a{display:inline-flex;align-items:center;gap:8px;margin-top:16px;font-size:14px;color:var(--claro);text-underline-offset:4px}
+.galeria{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:120px;gap:12px}
+.galeria figure{margin:0;border-radius:var(--raio);overflow:hidden;background:var(--papel-2)}
+.galeria img{width:100%;height:100%;object-fit:cover}
+.g1{grid-column:1/5;grid-row:1/4}
+.g2{grid-column:5/7;grid-row:1/3}
+.g3{grid-column:5/7;grid-row:3/5}
+.g4{grid-column:1/3;grid-row:4/6}
+.g5{grid-column:3/5;grid-row:4/6}
+.g6{grid-column:5/7;grid-row:5/6}
+
+/* ---------- 07 formulário ---------- */
+.contato{overflow:hidden}
+.contato::before{content:"";position:absolute;inset:0;background:radial-gradient(50% 60% at 100% 0%,rgba(167,127,31,.16),transparent 70%);pointer-events:none}
+.contato-grid{position:relative;display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(36px,5vw,72px);align-items:start}
+.contato h2{margin-bottom:22px}
+.info-inst{list-style:none;margin:40px 0 0;padding:0;border-top:1px solid var(--linha-escura)}
+.info-inst li{display:grid;grid-template-columns:28px 1fr;gap:14px;padding:18px 0;border-bottom:1px solid var(--linha-escura);font-size:14.5px;color:var(--claro-2)}
+.info-inst svg{width:20px;height:20px;color:var(--ouro-luz);margin-top:3px}
+.info-inst b{display:block;color:var(--claro);font-weight:500;font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:2px}
+.info-inst a{color:var(--claro);text-underline-offset:4px}
+.info-inst .pend{color:#E9B48F;font-style:italic}
+
+.form-card{background:var(--papel);color:var(--tinta);border-radius:var(--raio-g);padding:clamp(24px,3.2vw,44px);box-shadow:0 40px 80px -40px rgba(0,0,0,.7);scroll-margin-top:calc(var(--header) + 16px)}
+.progresso{display:flex;align-items:center;gap:14px;margin-bottom:26px}
+.progresso .barra{flex:1;height:3px;border-radius:3px;background:var(--linha);overflow:hidden}
+.progresso .barra i{display:block;height:100%;width:0;background:var(--ouro);transition:width .35s ease}
+.progresso span{font-size:12.5px;color:var(--tinta-3);letter-spacing:.04em;white-space:nowrap}
+.area-atual{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;background:var(--papel-2);border:1px solid var(--linha);border-radius:12px;padding:10px 14px;margin-bottom:22px;font-size:13.5px}
+.area-atual b{font-weight:500}
+.area-atual button{margin-left:auto;background:none;border:0;padding:4px 0;color:var(--ouro-txt);font-weight:500;font-size:13.5px;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.etapa{border:0;margin:0;padding:0;min-width:0}
+.etapa legend{font-family:var(--serif);font-size:clamp(22px,2.3vw,28px);line-height:1.25;padding:0;margin-bottom:22px}
+.etapa legend:focus{outline:none}
+.opcoes{display:grid;gap:10px}
+.opcao{position:relative;display:flex;align-items:center;gap:14px;padding:15px 18px;background:var(--branco);border:1px solid var(--linha);border-radius:12px;cursor:pointer;font-size:15px;line-height:1.4;transition:border-color .2s,background .2s}
+.opcao:hover{border-color:var(--ouro-claro)}
+.opcao input{appearance:none;-webkit-appearance:none;flex:none;width:20px;height:20px;margin:0;border:1.5px solid var(--tinta-3);border-radius:50%;display:grid;place-items:center;cursor:pointer;transition:border-color .2s}
+.opcao input::after{content:"";width:10px;height:10px;border-radius:50%;background:var(--ouro);transform:scale(0);transition:transform .15s}
+.opcao input:checked{border-color:var(--ouro)}
+.opcao input:checked::after{transform:scale(1)}
+.opcao:has(input:checked){border-color:var(--ouro);background:#FBF6EA}
+.opcao input:focus-visible{outline:2px solid var(--ouro);outline-offset:3px}
+.campo{display:flex;flex-direction:column;gap:6px;margin-top:16px}
+.campo label{font-size:14px;font-weight:500}
+.campo input[type=text],.campo input[type=tel]{min-height:52px;padding:12px 16px;border:1px solid var(--linha);border-radius:12px;background:var(--branco);font-size:16px;transition:border-color .2s}
+.campo input:focus{outline:none;border-color:var(--ouro);box-shadow:0 0 0 3px rgba(167,127,31,.18)}
+.campo .dica{font-size:12.5px;color:var(--tinta-3)}
+.campo.invalido input{border-color:var(--erro)}
+.msg-erro{display:none;font-size:13px;color:var(--erro);margin-top:2px}
+.invalido > .msg-erro,.msg-erro.on{display:block}
+.intro-final{color:var(--tinta-2);margin:-8px 0 8px}
+.consent{display:flex;gap:12px;align-items:flex-start;margin-top:20px;font-size:13.5px;line-height:1.55;color:var(--tinta-2);cursor:pointer}
+.consent input{flex:none;width:20px;height:20px;margin:1px 0 0;accent-color:var(--ouro)}
+.consent a{color:var(--ouro-txt)}
+.acoes{display:flex;align-items:center;gap:14px;margin-top:28px}
+.acoes .btn{flex:1}
+.btn-voltar{min-height:52px;padding:0 6px;background:none;border:0;cursor:pointer;font-size:14.5px;font-weight:500;color:var(--tinta-2);display:inline-flex;align-items:center;gap:8px}
+.btn-voltar:hover{color:var(--tinta)}
+.btn-voltar[hidden]{display:none}
+.btn[disabled]{opacity:.55;cursor:not-allowed;transform:none;box-shadow:none}
+.btn .spin{width:18px;height:18px;border-radius:50%;border:2px solid rgba(255,255,255,.35);border-top-color:#fff;animation:gira .8s linear infinite;display:none}
+.btn.carregando .spin{display:inline-block}
+.btn.carregando .seta{display:none}
+@keyframes gira{to{transform:rotate(360deg)}}
+.alerta{display:none;margin-top:18px;padding:14px 16px;border-radius:12px;background:#FBEAE6;border:1px solid #E8B4A8;color:#7A2414;font-size:14px;line-height:1.5}
+.alerta.on{display:block}
+.sucesso{text-align:center;padding:16px 0 4px}
+.sucesso .ok{width:64px;height:64px;margin:0 auto 22px;border-radius:50%;display:grid;place-items:center;background:#F3EAD3;color:var(--ouro-txt)}
+.sucesso .ok svg{width:28px;height:28px}
+.sucesso h3{font-size:clamp(26px,2.8vw,32px);margin-bottom:12px}
+.sucesso p{color:var(--tinta-2);max-width:42ch;margin:0 auto 26px}
+.sucesso .redir{font-size:13px;color:var(--tinta-3);margin-top:16px}
+.prova-nota{margin-top:18px;font-size:12px;color:var(--tinta-3);text-align:center}
+
+/* ---------- rodapé ---------- */
+.rodape{background:#0F0D0B;color:var(--claro-2);padding:clamp(56px,7vw,80px) 0 28px;font-size:14px}
+.rodape-grid{display:grid;grid-template-columns:1.1fr 1fr 1fr 1fr;gap:32px;padding-bottom:40px;border-bottom:1px solid var(--linha-escura)}
+.rodape .logo img{height:58px;width:auto;margin-bottom:18px}
+.rodape h4{margin:0 0 10px;font-size:12px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--ouro-luz)}
+.rodape p{margin:0 0 6px}
+.rodape a{color:var(--claro);text-underline-offset:4px}
+.rodape .pend{color:#E9B48F;font-style:italic}
+.rodape .legal{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;font-size:13.5px}
+.rodape .legal dt{color:var(--claro)}
+.rodape .legal dd{margin:0}
+.rodape .base{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-top:24px;font-size:12.5px;color:#8C8378}
+.rodape .base .proto{color:#E9B48F}
+
+/* ---------- WhatsApp flutuante ---------- */
+.wpp{position:fixed;right:20px;bottom:20px;z-index:40;display:flex;align-items:center;gap:12px}
+.wpp .balao{background:var(--papel);color:var(--tinta);font-size:13px;line-height:1.4;padding:10px 14px;border-radius:12px;box-shadow:0 12px 30px -12px rgba(0,0,0,.35);max-width:230px;opacity:0;transform:translateX(8px);transition:opacity .25s,transform .25s;pointer-events:none}
+.wpp:hover .balao,.wpp:focus-within .balao{opacity:1;transform:none}
+.wpp a{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#1F8F4E;color:#fff;box-shadow:0 14px 30px -10px rgba(0,0,0,.5);transition:transform .2s}
+.wpp a:hover{transform:scale(1.06)}
+.wpp svg{width:28px;height:28px}
+.wpp.oculto{opacity:0;pointer-events:none;transform:translateY(10px);transition:opacity .25s,transform .25s}
+
+/* ---------- animação de entrada ---------- */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none;transition:none}
+  *{animation:none!important;transition:none!important}
+}
+
+/* ---------- responsivo ---------- */
+@media (max-width:1080px){
+  .topo nav{display:none}
+  .doc{grid-template-columns:1fr}
+  .doc .foto{min-height:0;aspect-ratio:4/4.2}
+}
+@media (max-width:900px){
+  :root{--header:64px}
+  .topo .logo img{height:34px}
+  .hero-grid,.sec-head,.derm-feature,.tec-grid,.nutri-grid,.proc-grid,.estrutura,.contato-grid{grid-template-columns:1fr}
+  .hero h1{max-width:none}
+  .hero-foto{justify-self:center;width:min(100%,420px);margin-top:12px}
+  .hero-foto figcaption{left:12px}
+  .derm-feature .foto{min-height:0;aspect-ratio:4/3}
+  .cards{grid-template-columns:1fr 1fr}
+  .tec-fotos{max-width:520px}
+  .nutri-foto{aspect-ratio:4/4.4;max-width:520px}
+  .rodape-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  .docs{grid-template-columns:1fr}
+  .doc{grid-template-columns:.9fr 1.1fr}
+  .doc .foto{aspect-ratio:auto;min-height:280px}
+  .galeria{grid-template-columns:1fr 1fr;grid-auto-rows:150px}
+  .g1{grid-column:1/3;grid-row:auto / span 2}
+  .g2,.g3,.g4,.g5{grid-column:auto;grid-row:auto / span 1}
+  .g6{display:none}
+}
+@media (max-width:640px){
+  body{font-size:15.5px}
+  .cards{grid-template-columns:1fr}
+  .card-foto{min-height:220px}
+  .grupo{grid-template-columns:1fr;gap:14px}
+  .cta-row .btn,.cta-center .btn,.painel .btn{width:100%}
+  .painel .btn{align-self:stretch}
+  .doc{grid-template-columns:1fr}
+  .doc .foto{aspect-ratio:4/3.6;min-height:0}
+  .hero .apoio{margin:22px 0 28px}
+  .areas{margin-top:32px}
+  .rodape-grid{grid-template-columns:1fr}
+  .wpp{right:14px;bottom:14px}
+  .wpp a{width:54px;height:54px}
+  .wpp .balao{display:none}
+  .acoes{flex-direction:column-reverse;align-items:stretch}
+  .btn-voltar{justify-content:center}
+  .form-card{padding:22px 18px}
+}
+@media (max-width:480px){
+  .topo .btn{padding:9px 14px;font-size:13px}
+  .topo .btn .seta{display:none}
+  .hero-foto figcaption{max-width:210px;bottom:20px}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-seta" viewBox="0 0 16 16"><path d="M4 12 12 4M5.5 4H12v6.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
+    <symbol id="i-relogio" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 7.5V12l3 2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+    <symbol id="i-wpp" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91A9.85 9.85 0 0 0 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.24 8.24 0 1 1 6.99 3.86Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.43-.06-.13-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.29Z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-volta" viewBox="0 0 16 16"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<!-- ===================== HEADER ===================== -->
+<header class="topo" id="topo">
+  <div class="wrap">
+    <a class="logo" href="#inicio" aria-label="Clínica Supreme, início"><img src="images/brand/logo-branca.png" alt="Supreme Lifestyle Clinic" width="640" height="314"></a>
+    <nav aria-label="Áreas de atendimento">
+      <ul>
+        <li><a href="#dermatologia">Dermatologia</a></li>
+        <li><a href="#tecnologias">Tecnologias</a></li>
+        <li><a href="#nutrologia">Nutrologia</a></li>
+        <li><a href="#procedimentos">Procedimentos</a></li>
+        <li><a href="#medicos">Médicos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+    <!-- COPY: CTA Seção 01 -->
+    <a class="btn btn-ouro" href="#contato" data-area="">Solicitar avaliação <span class="seta"><svg><use href="#i-seta"/></svg></span></a>
+  </div>
+</header>
+
+<main>
+
+<!-- ===================== 01 · HERO ===================== -->
+<section class="hero dark" id="inicio" aria-labelledby="h-hero">
+  <div class="wrap hero-grid">
+    <div class="rv">
+      <div class="marca"><img src="images/brand/monograma.png" alt="" width="88" height="104"><span>Clínica Supreme</span></div>
+      <!-- COPY: Seção 01 -->
+      <h1 id="h-hero">Dermatologia, nutrologia e tecnologias com <em>indicação médica individualizada</em></h1>
+      <p class="lead">A Supreme reúne diferentes áreas de atendimento em uma mesma estrutura. Na consulta, o médico entende sua queixa e orienta os tratamentos ou procedimentos que podem ser considerados para o seu caso.</p>
+      <p class="apoio">Você não precisa chegar sabendo qual procedimento ou tecnologia procurar.</p>
+      <div class="cta-row">
+        <a class="btn btn-ouro" href="#contato" data-area="">Solicitar avaliação <span class="seta"><svg><use href="#i-seta"/></svg></span></a>
+        <span class="local"><svg><use href="#i-pin"/></svg>Ed. New Times Square · Setor Bueno · Goiânia, GO</span>
+      </div>
+      <nav class="areas" aria-label="Ir para a área de interesse">
+        <a href="#dermatologia" class="destaque"><span class="n">01</span>Dermatologia</a>
+        <a href="#nutrologia"><span class="n">02</span>Nutrologia</a>
+        <a href="#tecnologias"><span class="n">03</span>Tecnologias</a>
+        <a href="#procedimentos"><span class="n">04</span>Atendimentos especializados</a>
+      </nav>
+    </div>
+    <figure class="hero-foto rv">
+      <div class="moldura"><img src="images/fundadores.webp" alt="Dr. Arthur Rocha e Dra. Maria Lígia Mendonça na recepção da Supreme" width="900" height="1466" fetchpriority="high"></div>
+      <figcaption><strong>Dra. Maria Lígia Mendonça e Dr. Arthur Rocha</strong><span>Dermatologia · Nutrologia</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ===================== 02 · DERMATOLOGIA ===================== -->
+<section class="sec derm" id="dermatologia" aria-labelledby="h-derm">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <p class="kicker">Dermatologia</p>
+        <!-- COPY: Seção 02 -->
+        <h2 id="h-derm">Dermatologia clínica e estética para diferentes necessidades da <em>pele e do cabelo</em></h2>
+      </div>
+      <p class="lead">A Supreme atende desde queixas clínicas até cuidados relacionados ao rejuvenescimento, qualidade da pele e harmonia facial. A indicação considera as características de cada paciente e o que precisa ser tratado.</p>
+    </div>
+
+    <div class="derm-feature">
+      <div class="foto rv"><img src="images/pele.webp" alt="Rosto com pele iluminada e uniforme" width="900" height="900" loading="lazy"></div>
+      <div class="texto">
+        <article class="bloco-rejuv rv">
+          <h3>Rejuvenescimento facial</h3>
+          <p>Cuidados relacionados à flacidez, perda de contorno, linhas de expressão e outras mudanças percebidas com o tempo.</p>
+          <p>Entre as possibilidades está o Natural Lift.</p>
+        </article>
+        <article class="natural-lift rv">
+          <h3>Natural Lift</h3>
+          <p>Combinação de recursos como preenchedores e toxina botulínica, definida após avaliação médica, com foco no equilíbrio dos traços faciais e na naturalidade.</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="cards">
+      <article class="card rv"><span class="num">01</span><h3>Manchas, textura e cicatrizes</h3><p>Atendimento para melasma, acne, rosácea, cicatrizes, poros dilatados e alterações na textura e qualidade da pele.</p></article>
+      <article class="card rv"><span class="num">02</span><h3>Harmonização e preenchimentos</h3><p>Procedimentos como preenchimentos e rinomodelação podem ser considerados de acordo com a anatomia e as proporções de cada paciente.</p></article>
+      <article class="card rv"><span class="num">03</span><h3>Dermatologia clínica</h3><p>Acompanhamento de acne, melasma, rosácea, hiperidrose, dermatites e avaliação de alterações relacionadas ao câncer de pele.</p></article>
+      <article class="card rv"><span class="num">04</span><h3>Cabelos e couro cabeludo</h3><p>Investigação de queda de cabelo, alopecia e outras queixas capilares.</p></article>
+      <article class="card rv"><span class="num">05</span><h3>Cuidados dermatológicos corporais</h3><p>Tratamentos relacionados à pele, flacidez e outras alterações corporais que precisam de avaliação dermatológica.</p></article>
+      <figure class="card-foto rv" style="margin:0"><img src="images/capilar.webp" alt="Tratamento capilar realizado na Supreme" width="900" height="600" loading="lazy"></figure>
+    </div>
+
+    <div class="cta-center rv">
+      <a class="btn btn-ouro" href="#contato" data-area="derm">Solicitar avaliação dermatológica <span class="seta"><svg><use href="#i-seta"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 03 · TECNOLOGIAS ===================== -->
+<section class="sec tec dark" id="tecnologias" aria-labelledby="h-tec">
+  <div class="wrap tec-grid">
+    <div class="rv">
+      <p class="kicker">Tecnologias</p>
+      <!-- COPY: Seção 03 -->
+      <h2 id="h-tec">Diferentes recursos permitem tratar <em>necessidades diferentes</em></h2>
+      <p class="lead" style="margin-top:22px">A Supreme dispõe de tecnologias que podem fazer parte dos cuidados com firmeza, rejuvenescimento, qualidade da pele, contorno corporal e depilação. A escolha é feita depois da consulta, de acordo com a indicação médica.</p>
+      <div class="tec-grupos">
+        <div class="grupo"><h3>Face e pele</h3>
+          <ul aria-label="Face e pele"><li>Oligio X</li><li>Fotona 5D</li><li>Fotona StarWalker</li><li>Liftera</li><li>Coolfase</li><li>Mesoject</li><li>MMP</li><li>Sofwave</li><li>Laser CO₂ Fracionado</li><li>SylfirmX</li></ul></div>
+        <div class="grupo"><h3>Corpo</h3>
+          <ul aria-label="Corpo"><li>Lipo AI</li><li>Scizer</li><li>AlmaPrime</li><li>Onda</li><li>Cooltech</li><li>Legacy</li><li>Endolaser</li><li>BodyShape</li></ul></div>
+        <div class="grupo"><h3>Depilação</h3>
+          <ul aria-label="Depilação"><li>Ácrus</li></ul></div>
+      </div>
+      <div class="cta-row">
+        <a class="btn btn-ouro" href="#contato" data-area="tec">Solicitar avaliação <span class="seta"><svg><use href="#i-seta"/></svg></span></a>
+      </div>
+    </div>
+    <div class="tec-fotos rv" aria-hidden="false">
+      <figure><img src="images/oligio.webp" alt="Atendimento com tecnologia Oligio X" width="700" height="1239" loading="lazy"></figure>
+      <figure><img src="images/fotona.webp" alt="Atendimento com laser Fotona" width="700" height="1642" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 04 · NUTROLOGIA ===================== -->
+<section class="sec nutri" id="nutrologia" aria-labelledby="h-nutri">
+  <div class="wrap nutri-grid">
+    <figure class="nutri-foto rv" style="margin:0">
+      <img src="images/arthur-recepcao.webp" alt="Dr. Arthur Rocha na recepção da Supreme" width="800" height="1102" loading="lazy">
+      <figcaption><strong>Dr. Arthur Rocha</strong> · Nutrologia</figcaption>
+    </figure>
+    <div class="rv">
+      <p class="kicker">Nutrologia</p>
+      <!-- COPY: Seção 04 -->
+      <h2 id="h-nutri">Nutrologia para acompanhar peso, metabolismo e <em>saúde ao longo do tempo</em></h2>
+      <p class="lead">Na consulta, o médico avalia fatores relacionados ao metabolismo, peso, composição corporal e rotina antes de definir o acompanhamento.</p>
+      <ol class="lista">
+        <li><span class="num">01</span><div><h3>Saúde metabólica</h3><p>Avaliação de fatores relacionados ao metabolismo e à composição corporal.</p></div></li>
+        <li><span class="num">02</span><div><h3>Emagrecimento com acompanhamento médico</h3><p>Conduta definida após consulta, considerando o quadro clínico e as necessidades identificadas.</p></div></li>
+        <li><span class="num">03</span><div><h3>Acompanhamento nutricional</h3><p>Orientação relacionada à alimentação quando indicada dentro do plano de cuidado.</p></div></li>
+        <li><span class="num">04</span><div><h3>Menopausa e andropausa</h3><p>Avaliação de queixas e mudanças percebidas nessas fases da vida.</p></div></li>
+        <li><span class="num">05</span><div><h3>Performance física e esportiva</h3><p>Acompanhamento relacionado à composição corporal, prática física e objetivos de desempenho. Quando houver indicação, a nutrologia pode ser integrada a outros cuidados realizados na Supreme.</p></div></li>
+      </ol>
+      <a class="btn btn-ouro" href="#contato" data-area="nutri">Solicitar avaliação em nutrologia <span class="seta"><svg><use href="#i-seta"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 05 · PROCEDIMENTOS E SUPREME CARE ===================== -->
+<section class="sec proc" id="procedimentos" aria-labelledby="h-proc">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <p class="kicker">Procedimentos e Supreme Care</p>
+        <!-- COPY: Seção 05 -->
+        <h2 id="h-proc">A Supreme também realiza procedimentos cirúrgicos e atendimentos <em>planejados em conjunto</em></h2>
+      </div>
+    </div>
+    <div class="proc-grid">
+      <article class="painel painel-cir rv">
+        <div class="foto"><img src="images/cirurgia.webp" alt="Equipe médica em procedimento no centro cirúrgico" width="900" height="1178" loading="lazy"></div>
+        <div class="corpo">
+          <h3>Procedimentos cirúrgicos</h3>
+          <ul class="chips"><li>Blefaroplastia</li><li>Lipo AI de papada</li><li>Lipo AI corporal</li><li>Transplante capilar</li><li>Ninfoplastia</li></ul>
+          <p class="nota">A indicação e as condições para realização são definidas pelo médico responsável.</p>
+          <a class="btn btn-linha" href="#contato" data-area="cir">Conversar com a equipe Supreme <svg><use href="#i-seta"/></svg></a>
+        </div>
+      </article>
+      <article class="painel painel-care rv">
+        <div class="foto"><img src="images/supreme-care.webp" alt="Paciente em momento de descanso" width="900" height="1350" loading="lazy"></div>
+        <div class="corpo">
+          <h3>Supreme Care</h3>
+          <p>Quando mais de um procedimento é indicado, o Supreme Care permite organizar diferentes etapas do atendimento em um mesmo dia.</p>
+          <p class="nota">A combinação depende do que pode ser realizado com segurança para cada paciente. A sedação pode ser considerada quando houver indicação médica.</p>
+          <a class="btn btn-ouro" href="#contato" data-area="care">Conversar com a equipe Supreme <span class="seta"><svg><use href="#i-seta"/></svg></span></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 06 · MÉDICOS E ESTRUTURA ===================== -->
+<section class="sec medicos" id="medicos" aria-labelledby="h-med">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <p class="kicker">Médicos e estrutura</p>
+        <!-- COPY: Seção 06 -->
+        <h2 id="h-med">Dra. Maria Lígia Mendonça e Dr. Arthur Rocha estão <em>à frente da Supreme</em></h2>
+      </div>
+      <p class="lead">A clínica foi fundada pelos dois médicos e reúne diferentes áreas de atendimento em sua estrutura no Setor Bueno, em Goiânia.</p>
+    </div>
+
+    <div class="docs">
+      <article class="doc rv">
+        <div class="foto"><img src="images/maria-ligia.webp" alt="Dra. Maria Lígia Mendonça" width="760" height="1140" loading="lazy"></div>
+        <div class="info">
+          <span class="area">Dermatologia</span>
+          <h3>Dra. Maria Lígia Mendonça</h3>
+          <p>Dermatologista e mentora na formação de médicos na área estética.</p>
+          <!-- PENDÊNCIA (observação em vermelho na copy) -->
+          <p class="pendencia"><b>A VALIDAR ·</b> validar CRM, RQE, títulos e informação sobre mentoria antes da publicação.</p>
+        </div>
+      </article>
+      <article class="doc rv">
+        <div class="foto"><img src="images/arthur-rocha.webp" alt="Dr. Arthur Rocha" width="760" height="995" loading="lazy"></div>
+        <div class="info">
+          <span class="area">Nutrologia</span>
+          <h3>Dr. Arthur Rocha</h3>
+          <p>Nutrólogo e fundador da Supreme.</p>
+          <p class="pendencia"><b>A VALIDAR ·</b> validar CRM, RQE, títulos e informação sobre mentoria antes da publicação.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="estrutura">
+      <div class="rv">
+        <h3>A Supreme em Goiânia</h3>
+        <p class="lead">A clínica está no Edifício New Times Square, no Setor Bueno.</p>
+        <address class="endereco">
+          <strong>Ed. New Times Square</strong>
+          <span>Av. T-10 esq. Rua T-27 · Sala 1810</span>
+          <span>Setor Bueno · Goiânia, GO</span>
+          <a href="https://www.google.com/maps/search/?api=1&query=Ed.+New+Times+Square+Av.+T-10+Setor+Bueno+Goi%C3%A2nia" target="_blank" rel="noopener"><svg width="16" height="16"><use href="#i-pin"/></svg>Abrir no mapa</a>
+        </address>
+        <div class="cta-row" style="margin-top:28px">
+          <a class="btn btn-ouro" href="#contato" data-area="">Solicitar avaliação <span class="seta"><svg><use href="#i-seta"/></svg></span></a>
+        </div>
+      </div>
+      <div class="galeria rv" aria-label="Fotos da clínica">
+        <figure class="g1"><img src="images/recepcao.webp" alt="Recepção da Supreme com o monograma da marca" width="1600" height="1068" loading="lazy"></figure>
+        <figure class="g2"><img src="images/predio.webp" alt="Edifício New Times Square" width="700" height="965" loading="lazy"></figure>
+        <figure class="g3"><img src="images/sala-tecnologia.webp" alt="Sala de tecnologias da Supreme" width="800" height="1540" loading="lazy" style="object-position:50% 40%"></figure>
+        <figure class="g4"><img src="images/consultorio.webp" alt="Consultório com vista para a cidade" width="1400" height="935" loading="lazy"></figure>
+        <figure class="g5"><img src="images/poltronas.webp" alt="Sala com poltronas de atendimento" width="1200" height="801" loading="lazy"></figure>
+        <figure class="g6"><img src="images/quadros.webp" alt="Detalhe da decoração da clínica" width="1200" height="801" loading="lazy"></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 07 · FALE COM A SUPREME ===================== -->
+<section class="sec contato dark" id="contato" aria-labelledby="h-contato">
+  <div class="wrap contato-grid">
+    <div class="rv">
+      <p class="kicker">Fale com a Supreme</p>
+      <!-- COPY: Seção 07 -->
+      <h2 id="h-contato">Conte qual é a sua <em>principal queixa</em></h2>
+      <p class="lead">Você não precisa saber qual procedimento ou tecnologia procurar. Conte o que gostaria de cuidar para que a equipe direcione seu atendimento.</p>
+      <ul class="info-inst">
+        <li><svg><use href="#i-pin"/></svg><div><b>Endereço</b>Ed. New Times Square<br>Av. T-10 esq. Rua T-27 · Sala 1810<br>Setor Bueno · Goiânia, GO</div></li>
+        <li><svg><use href="#i-wpp"/></svg><div><b>WhatsApp</b><a href="tel:+5562991789330">(62) 9 9178-9330</a></div></li>
+        <li><svg><use href="#i-relogio"/></svg><div><b>Horários</b><span class="pend">[a confirmar com a clínica]</span></div></li>
+      </ul>
+    </div>
+
+    <!-- FORMULÁRIO QUALIFICATIVO (protótipo visual: sem integração) -->
+    <div class="form-card rv" id="form-card">
+      <form id="form" novalidate aria-labelledby="form-titulo">
+        <h3 id="form-titulo" class="sr-only">Formulário de solicitação de avaliação</h3>
+        <div class="progresso" aria-hidden="false">
+          <div class="barra" role="progressbar" aria-label="Progresso do formulário" aria-valuemin="1" aria-valuemax="6" aria-valuenow="1"><i></i></div>
+          <span id="prog-txt">Etapa 1 de 6</span>
+        </div>
+        <div class="area-atual" id="area-atual" hidden>
+          <span>Área: <b id="area-nome"></b></span>
+          <button type="button" id="trocar-area">Alterar área</button>
+        </div>
+        <div id="etapa-host" aria-live="polite"></div>
+        <div class="alerta" id="alerta" role="alert"></div>
+        <div class="acoes" id="acoes">
+          <button type="button" class="btn-voltar" id="voltar" hidden><svg width="16" height="16"><use href="#i-volta"/></svg>Voltar</button>
+          <button type="submit" class="btn btn-ouro" id="avancar"><span class="txt">Continuar</span><span class="spin" aria-hidden="true"></span><span class="seta"><svg><use href="#i-seta"/></svg></span></button>
+        </div>
+      </form>
+      <!-- Página após o envio (COPY) -->
+      <div class="sucesso" id="sucesso" hidden tabindex="-1">
+        <div class="ok"><svg><use href="#i-check"/></svg></div>
+        <h3>Recebemos sua solicitação</h3>
+        <p>Continue pelo WhatsApp para falar com a equipe Supreme e dar sequência ao atendimento.</p>
+        <a class="btn btn-ouro" id="btn-wpp" href="#" target="_blank" rel="noopener">Continuar no WhatsApp <span class="seta"><svg><use href="#i-seta"/></svg></span></a>
+        <p class="redir">Protótipo: na versão final o encaminhamento ao WhatsApp é automático após o registro.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===================== RODAPÉ ===================== -->
+<footer class="rodape">
+  <div class="wrap">
+    <div class="rodape-grid">
+      <div>
+        <a class="logo" href="#inicio"><img src="images/brand/logo-dourada.png" alt="Supreme Lifestyle Clinic" width="640" height="317" loading="lazy"></a>
+      </div>
+      <div>
+        <h4>Clínica Supreme</h4>
+        <p>Ed. New Times Square</p>
+        <p>Av. T-10 esq. Rua T-27 · Sala 1810</p>
+        <p>Setor Bueno · Goiânia, GO</p>
+      </div>
+      <div>
+        <h4>WhatsApp</h4>
+        <p><a href="tel:+5562991789330">(62) 9 9178-9330</a></p>
+        <h4 style="margin-top:22px">Política de Privacidade</h4>
+        <p class="pend">[INSERIR LINK]</p>
+      </div>
+      <div>
+        <dl class="legal">
+          <dt>Responsável técnico</dt><dd class="pend">[VALIDAR]</dd>
+          <dt>CRM / RQE</dt><dd class="pend">[VALIDAR]</dd>
+          <dt>CNPJ</dt><dd class="pend">[VALIDAR]</dd>
+        </dl>
+        <p class="pend" style="margin-top:14px;font-size:12.5px">[DEMAIS INFORMAÇÕES LEGAIS E MÉDICAS OBRIGATÓRIAS APÓS VALIDAÇÃO]</p>
+      </div>
+    </div>
+    <div class="base">
+      <span>© <span id="ano">2026</span> Clínica Supreme</span>
+      <span class="proto">Protótipo para validação interna · 3ADS</span>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp visual: leva ao formulário (briefing: responder as perguntas antes) -->
+<div class="wpp" id="wpp">
+  <span class="balao" id="wpp-txt">Responda algumas perguntas rápidas e continue o atendimento pelo WhatsApp.</span>
+  <a href="#contato" data-area="" aria-label="Falar com a Supreme pelo WhatsApp. Antes, responda algumas perguntas rápidas." aria-describedby="wpp-txt"><svg><use href="#i-wpp"/></svg></a>
+</div>
+
+<script>
+(() => {
+  const CONFIG = {
+    whatsapp: '5562991789330',
+    mensagem: 'Olá! Acabei de preencher o formulário no site da Supreme e gostaria de continuar meu atendimento para agendar uma avaliação.'
+  };
+
+  /* Perguntas do briefing de formulário (subtarefa "Briefing desenvolvimento de formulário + integrações") */
+  const AREAS = {
+    derm: { label:'Dermatologia e tratamentos faciais',
+      q2:{ t:'Qual tipo de atendimento dermatológico mais interessa a você?', o:['Natural Lift e rejuvenescimento facial.','Harmonização e preenchimentos faciais.','Qualidade da pele, manchas e cicatrizes.','Dermatologia clínica.','Tratamentos para queda de cabelo.','Quero orientação sobre as opções.'] },
+      q3:{ t:'Que tipo de atendimento você procura?', o:['Primeira avaliação.','Tratamento específico.','Continuidade de acompanhamento.','Preciso de orientação.'] } },
+    tec: { label:'Tecnologias estéticas faciais e corporais',
+      q2:{ t:'Qual resultado ou tipo de tratamento você procura?', o:['Rejuvenescimento e firmeza facial.','Melhora da textura e qualidade da pele.','Gordura localizada e contorno corporal.','Flacidez e celulite.','Depilação a laser.','Conhecer as tecnologias disponíveis.'] },
+      q3:{ t:'Você já conhece a tecnologia que gostaria de avaliar?', o:['Sim, tenho uma em mente.','Quero entender as diferenças.','Gostaria de uma indicação profissional.'] } },
+    nutri: { label:'Nutrologia e emagrecimento',
+      q2:{ t:'Qual é o principal motivo do seu interesse?', o:['Emagrecimento com acompanhamento médico.','Saúde e equilíbrio hormonal.','Menopausa ou andropausa.','Performance física e esportiva.','Acompanhamento nutricional.','Avaliação nutrológica geral.'] },
+      q3:{ t:'Qual tipo de acompanhamento procura?', o:['Primeira consulta.','Acompanhamento contínuo.','Quero entender qual abordagem é indicada.'] } },
+    cir: { label:'Procedimentos cirúrgicos',
+      q2:{ t:'Qual procedimento gostaria de conhecer?', o:['Blefaroplastia.','Lipo AI de papada.','Lipo AI corporal.','Transplante capilar.','Ninfoplastia.','Quero orientação sobre os procedimentos.'] },
+      q3:{ t:'Em qual etapa você está?', o:['Pesquisando possibilidades.','Quero agendar uma avaliação.','Já passei por avaliação e busco outra opinião.'] } },
+    care: { label:'Supreme Care',
+      q2:{ t:'O que mais interessa a você no Supreme Care?', o:['Conhecer a experiência Supreme Care.','Avaliar a possibilidade de realizar diferentes tratamentos no mesmo dia.','Agendar uma avaliação personalizada.'] },
+      q3:{ t:'Como gostaria de iniciar?', o:['Conhecendo a experiência.','Avaliando possíveis procedimentos.','Agendando uma avaliação personalizada.'] } },
+    indef: { label:'Ainda não sei qual tratamento procurar',
+      q2:{ t:'Qual assunto mais se aproxima do que você procura?', o:['Pele e rejuvenescimento facial.','Estética corporal.','Emagrecimento e saúde metabólica.','Procedimentos cirúrgicos.','Atendimento integrado e personalizado.','Prefiro conversar com a equipe.'] },
+      q3:{ t:'Como podemos ajudar inicialmente?', o:['Quero conhecer as opções.','Gostaria de agendar uma avaliação.','Prefiro falar com a equipe.'] } }
+  };
+  const Q1 = { t:'Qual área da Supreme você gostaria de conhecer melhor?' };
+  Q1.o = [
+    {v:'derm',l:'Dermatologia e tratamentos faciais.'},{v:'tec',l:'Tecnologias estéticas faciais e corporais.'},{v:'nutri',l:'Nutrologia e emagrecimento.'},
+    {v:'cir',l:'Procedimentos cirúrgicos.'},{v:'care',l:'Supreme Care.'},{v:'indef',l:'Ainda não sei qual tratamento procurar.'}
+  ];
+  const Q4 = { t:'Quando você gostaria de agendar seu atendimento?', o:['O quanto antes.','Nos próximos 30 dias.','Entre 1 e 3 meses.','Ainda estou pesquisando.'] };
+  const Q5 = { t:'De qual cidade você viria para a Supreme?', o:['Goiânia.','Aparecida de Goiânia.','Senador Canedo.','Trindade.','Anápolis.','Outra cidade.'] };
+  const TOTAL = 6;
+
+  const st = { etapa:1, area:'', q2:'', q3:'', prazo:'', cidade:'', cidadeOutra:'', nome:'', whats:'', consent:false, enviando:false, enviado:false };
+
+  const $ = s => document.querySelector(s);
+  const host = $('#etapa-host'), form = $('#form'), alerta = $('#alerta');
+  const btnAv = $('#avancar'), btnVolta = $('#voltar');
+
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const semPonto = s => s.replace(/\.$/,'');
+
+  function opcoes(nome, lista, sel){
+    return '<div class="opcoes">' + lista.map((o,i) => {
+      const v = typeof o === 'string' ? o : o.v, l = typeof o === 'string' ? o : o.l;
+      return `<label class="opcao"><input type="radio" name="${nome}" value="${esc(v)}" ${v===sel?'checked':''}><span>${esc(semPonto(l))}</span></label>`;
+    }).join('') + '</div><p class="msg-erro" id="erro-'+nome+'">Escolha uma opção para continuar.</p>';
+  }
+
+  function render(focar){
+    alerta.classList.remove('on');
+    const e = st.etapa, a = AREAS[st.area];
+    let h = '';
+    if (e === 1) h = `<fieldset class="etapa"><legend tabindex="-1">${Q1.t}</legend>${opcoes('area', Q1.o, st.area)}</fieldset>`;
+    if (e === 2) h = `<fieldset class="etapa"><legend tabindex="-1">${a.q2.t}</legend>${opcoes('q2', a.q2.o, st.q2)}</fieldset>`;
+    if (e === 3) h = `<fieldset class="etapa"><legend tabindex="-1">${a.q3.t}</legend>${opcoes('q3', a.q3.o, st.q3)}</fieldset>`;
+    if (e === 4) h = `<fieldset class="etapa"><legend tabindex="-1">${Q4.t}</legend>${opcoes('prazo', Q4.o, st.prazo)}</fieldset>`;
+    if (e === 5) h = `<fieldset class="etapa"><legend tabindex="-1">${Q5.t}</legend>${opcoes('cidade', Q5.o, st.cidade)}
+        <div class="campo" id="campo-outra" ${st.cidade==='Outra cidade.'?'':'hidden'}>
+          <label for="cidade-outra">Cidade e UF</label>
+          <input type="text" id="cidade-outra" autocomplete="address-level2" placeholder="Ex.: Rio Verde, GO" value="${esc(st.cidadeOutra)}">
+          <p class="msg-erro">Informe a cidade e a UF.</p>
+        </div></fieldset>`;
+    if (e === 6) h = `<fieldset class="etapa"><legend tabindex="-1">Para finalizar, informe seus dados para continuar o atendimento com a equipe Supreme.</legend>
+        <div class="campo" id="campo-nome"><label for="nome">Como podemos chamar você?</label>
+          <input type="text" id="nome" autocomplete="given-name" value="${esc(st.nome)}" aria-describedby="erro-nome">
+          <p class="msg-erro" id="erro-nome">Informe como podemos chamar você.</p></div>
+        <div class="campo" id="campo-whats"><label for="whats">Qual número podemos utilizar para entrar em contato?</label>
+          <input type="tel" id="whats" inputmode="tel" autocomplete="tel-national" placeholder="(62) 9 0000-0000" value="${esc(st.whats)}" aria-describedby="dica-whats erro-whats">
+          <span class="dica" id="dica-whats">WhatsApp com DDD</span>
+          <p class="msg-erro" id="erro-whats">Informe um WhatsApp válido com DDD.</p></div>
+        <div id="campo-consent">
+          <label class="consent"><input type="checkbox" id="consent" ${st.consent?'checked':''}>
+            <span>Concordo com o uso dos meus dados para que a equipe Supreme entre em contato sobre o atendimento, conforme a <a href="#" onclick="return false">Política de Privacidade</a>. <em style="color:#8A3B12">[texto do consentimento a validar pela clínica]</em></span></label>
+          <p class="msg-erro" id="erro-consent">É preciso concordar para enviar a solicitação.</p></div>
+        </fieldset>`;
+    host.innerHTML = h;
+
+    // área visível e editável a partir da etapa 2
+    const box = $('#area-atual');
+    box.hidden = !(e > 1 && st.area);
+    if (st.area) $('#area-nome').textContent = semPonto(AREAS[st.area].label);
+
+    btnVolta.hidden = e === 1;
+    btnAv.querySelector('.txt').textContent = e === TOTAL ? 'Enviar e continuar no WhatsApp' : 'Continuar';
+    const pct = Math.round((e / TOTAL) * 100);
+    $('.progresso .barra i').style.width = pct + '%';
+    $('.progresso .barra').setAttribute('aria-valuenow', e);
+    $('#prog-txt').textContent = `Etapa ${e} de ${TOTAL}`;
+
+    bindEtapa();
+    if (focar) host.querySelector('legend')?.focus({preventScroll:true});
+  }
+
+  function bindEtapa(){
+    host.querySelectorAll('input[type=radio]').forEach(r => r.addEventListener('change', () => {
+      const n = r.name, v = r.value;
+      if (n === 'area') { if (st.area !== v) { st.q2 = ''; st.q3 = ''; } st.area = v; }
+      else st[n] = v;
+      if (n === 'cidade') { const c = $('#campo-outra'); c.hidden = v !== 'Outra cidade.'; if (!c.hidden) $('#cidade-outra').focus(); }
+      host.querySelector('#erro-' + n)?.classList.remove('on');
+    }));
+    const co = $('#cidade-outra'); if (co) co.addEventListener('input', () => { st.cidadeOutra = co.value; $('#campo-outra').classList.remove('invalido'); });
+    const nm = $('#nome'); if (nm) nm.addEventListener('input', () => { st.nome = nm.value; $('#campo-nome').classList.remove('invalido'); });
+    const wp = $('#whats'); if (wp) wp.addEventListener('input', () => { wp.value = mascara(wp.value); st.whats = wp.value; $('#campo-whats').classList.remove('invalido'); });
+    const cs = $('#consent'); if (cs) cs.addEventListener('change', () => { st.consent = cs.checked; $('#erro-consent').classList.remove('on'); });
+  }
+
+  function digitos(v){ let d = v.replace(/\D/g,''); if (d.length > 11 && d.startsWith('55')) d = d.slice(2); return d.slice(0,11); }
+  function mascara(v){
+    const d = digitos(v);
+    if (d.length <= 2) return d.length ? '(' + d : '';
+    if (d.length <= 6) return `(${d.slice(0,2)}) ${d.slice(2)}`;
+    if (d.length <= 10) return `(${d.slice(0,2)}) ${d.slice(2,6)}-${d.slice(6)}`;
+    return `(${d.slice(0,2)}) ${d.slice(2,3)} ${d.slice(3,7)}-${d.slice(7)}`;
+  }
+  function whatsValido(v){
+    const d = digitos(v);
+    if (!(d.length === 10 || d.length === 11)) return false;
+    if (+d.slice(0,2) < 11) return false;
+    if (d.length === 11 && d[2] !== '9') return false;
+    return true;
+  }
+
+  function valida(){
+    const e = st.etapa;
+    const req = {1:'area',2:'q2',3:'q3',4:'prazo',5:'cidade'}[e];
+    if (req && !st[req]) { $('#erro-' + req).classList.add('on'); host.querySelector('input')?.focus(); return false; }
+    if (e === 5 && st.cidade === 'Outra cidade.' && st.cidadeOutra.trim().length < 3) { $('#campo-outra').classList.add('invalido'); $('#cidade-outra').focus(); return false; }
+    if (e === 6) {
+      let ok = true, foco = null;
+      if (st.nome.trim().length < 2) { $('#campo-nome').classList.add('invalido'); foco = foco || $('#nome'); ok = false; }
+      if (!whatsValido(st.whats)) { $('#campo-whats').classList.add('invalido'); foco = foco || $('#whats'); ok = false; }
+      if (!st.consent) { $('#erro-consent').classList.add('on'); foco = foco || $('#consent'); ok = false; }
+      if (foco) foco.focus();
+      return ok;
+    }
+    return true;
+  }
+
+  form.addEventListener('submit', ev => {
+    ev.preventDefault();
+    if (st.enviando || !valida()) return;
+    if (st.etapa < TOTAL) { st.etapa++; render(true); return; }
+    enviar();
+  });
+  btnVolta.addEventListener('click', () => { if (st.etapa > 1 && !st.enviando) { st.etapa--; render(true); } });
+  $('#trocar-area').addEventListener('click', () => { st.etapa = 1; render(true); });
+
+  // Protótipo: simula a gravação. ?simular=erro mostra o estado de falha.
+  function enviar(){
+    st.enviando = true;
+    btnAv.classList.add('carregando'); btnAv.disabled = true; btnVolta.disabled = true;
+    btnAv.querySelector('.txt').textContent = 'Enviando...';
+    const falha = new URLSearchParams(location.search).get('simular') === 'erro' && !st.tentouErro;
+    setTimeout(() => {
+      st.enviando = false; btnAv.classList.remove('carregando'); btnAv.disabled = false; btnVolta.disabled = false;
+      if (falha) {
+        st.tentouErro = true;
+        btnAv.querySelector('.txt').textContent = 'Tentar novamente';
+        alerta.innerHTML = 'Não conseguimos registrar sua solicitação agora. Seus dados continuam preenchidos: tente novamente em instantes.';
+        alerta.classList.add('on');
+        return;
+      }
+      st.enviado = true;
+      form.hidden = true;
+      $('#btn-wpp').href = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(CONFIG.mensagem)}`;
+      const s = $('#sucesso'); s.hidden = false; s.focus();
+    }, 1400);
+  }
+
+  // CTAs: todos abrem o mesmo formulário; CTAs de área preenchem a área e começam na pergunta 2
+  document.querySelectorAll('a[data-area]').forEach(a => a.addEventListener('click', ev => {
+    ev.preventDefault();
+    if (!st.enviado) {
+      const area = a.dataset.area;
+      if (area) { if (st.area !== area) { st.q2 = ''; st.q3 = ''; } st.area = area; st.etapa = 2; }
+      else st.etapa = 1;
+      render(false);
+    }
+    $('#form-card').scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block:'start'});
+    setTimeout(() => (st.enviado ? $('#sucesso') : host.querySelector('legend'))?.focus({preventScroll:true}), 600);
+  }));
+
+  render(false);
+
+  // botão flutuante some quando o formulário está na tela
+  const wpp = $('#wpp');
+  new IntersectionObserver(([en]) => wpp.classList.toggle('oculto', en.isIntersecting), {threshold:.15}).observe($('#contato'));
+
+  // entrada suave
+  const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }), {rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.rv').forEach(el => io.observe(el));
+
+  $('#ano').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
