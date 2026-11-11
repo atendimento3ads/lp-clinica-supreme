@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Clínica Supreme · Dermatologia, nutrologia e tecnologias em Goiânia</title>
 <meta name="description" content="A Supreme reúne diferentes áreas de atendimento em uma mesma estrutura no Setor Bueno, em Goiânia.">
-<!-- PROTÓTIPO: não indexar até a publicação definitiva -->
+<!-- Prévia pública: não indexar até a definição do domínio oficial -->
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#15120F">
 <link rel="icon" type="image/png" href="images/brand/favicon.png">
@@ -175,7 +175,7 @@ p{margin:0 0 1em}
 .acordeao details[open] summary::after{transform:rotate(45deg)}
 .acordeao p{margin:0 0 16px;font-size:14px;color:var(--tinta-2);max-width:56ch}
 
-/* ---------- 05 procedimentos + supreme care ---------- */
+/* ---------- 05 procedimentos + supreme day ---------- */
 .proc{background:var(--papel)}
 .proc .sec-head{grid-template-columns:1fr;max-width:820px;margin-left:auto;margin-right:auto;text-align:center}
 .proc .sec-head .kicker{justify-content:center}
@@ -197,6 +197,12 @@ p{margin:0 0 1em}
 .painel-care h3{font-style:italic;color:var(--ouro-luz)}
 .painel-care p{color:var(--claro-2)}
 .painel-care p:first-of-type{color:var(--claro);font-size:15px}
+
+/* ---------- contato direto ---------- */
+.contato-direto h3{font-family:var(--serif);font-size:clamp(28px,3vw,40px);font-weight:400;margin:0 0 14px}
+.contato-direto p{max-width:46ch}
+.contato-direto .btn{margin:8px 0 20px}
+.contato-direto a:not(.btn){color:var(--ouro-txt)}
 
 /* ---------- 06 médicos e estrutura ---------- */
 .medicos{background:var(--branco)}
@@ -233,64 +239,13 @@ p{margin:0 0 1em}
 .endereco span{display:block}
 .endereco a{display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-size:13px;color:var(--ouro-txt);text-underline-offset:4px}
 
-/* ---------- 07 formulário ---------- */
+/* ---------- 07 contato ---------- */
 .contato{overflow:hidden}
 .contato::before{content:"";position:absolute;inset:0;background:radial-gradient(50% 60% at 100% 0%,rgba(167,127,31,.16),transparent 70%);pointer-events:none}
 .contato-grid{position:relative;display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(36px,5vw,72px);align-items:start}
 .contato h2{margin-bottom:16px}
 
-.form-card{background:var(--papel);color:var(--tinta);border-radius:var(--raio-g);padding:clamp(22px,2.6vw,36px);box-shadow:0 40px 80px -40px rgba(0,0,0,.7);scroll-margin-top:calc(var(--header) + 16px)}
-.progresso{display:flex;align-items:center;gap:14px;margin-bottom:26px}
-.progresso .barra{flex:1;height:3px;border-radius:3px;background:var(--linha);overflow:hidden}
-.progresso .barra i{display:block;height:100%;width:0;background:var(--ouro);transition:width .35s ease}
-.progresso span{font-size:12.5px;color:var(--tinta-3);letter-spacing:.04em;white-space:nowrap}
-.area-atual{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;background:var(--papel-2);border:1px solid var(--linha);border-radius:12px;padding:10px 14px;margin-bottom:22px;font-size:13.5px}
-.area-atual b{font-weight:500}
-.area-atual button{margin-left:auto;background:none;border:0;padding:4px 0;color:var(--ouro-txt);font-weight:500;font-size:13.5px;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
-.etapa{border:0;margin:0;padding:0;min-width:0}
-.etapa legend{font-family:var(--serif);font-size:clamp(19px,1.8vw,22px);line-height:1.3;padding:0;margin-bottom:18px}
-.etapa legend:focus{outline:none}
-.opcoes{display:grid;gap:10px}
-.opcao{position:relative;display:flex;align-items:center;gap:12px;padding:12px 16px;background:var(--branco);border:1px solid var(--linha);border-radius:12px;cursor:pointer;font-size:14px;line-height:1.4;transition:border-color .2s,background .2s}
-.opcao:hover{border-color:var(--ouro-claro)}
-.opcao input{appearance:none;-webkit-appearance:none;flex:none;width:20px;height:20px;margin:0;border:1.5px solid var(--tinta-3);border-radius:50%;display:grid;place-items:center;cursor:pointer;transition:border-color .2s}
-.opcao input::after{content:"";width:10px;height:10px;border-radius:50%;background:var(--ouro);transform:scale(0);transition:transform .15s}
-.opcao input:checked{border-color:var(--ouro)}
-.opcao input:checked::after{transform:scale(1)}
-.opcao:has(input:checked){border-color:var(--ouro);background:#FBF6EA}
-.opcao input:focus-visible{outline:2px solid var(--ouro);outline-offset:3px}
-.campo{display:flex;flex-direction:column;gap:6px;margin-top:16px}
-.campo label{font-size:14px;font-weight:500}
-.campo input[type=text],.campo input[type=tel]{min-height:48px;padding:12px 16px;border:1px solid var(--linha);border-radius:12px;background:var(--branco);font-size:16px;transition:border-color .2s}
-.campo input:focus{outline:none;border-color:var(--ouro);box-shadow:0 0 0 3px rgba(167,127,31,.18)}
-.campo .dica{font-size:12.5px;color:var(--tinta-3)}
-.campo.invalido input{border-color:var(--erro)}
-.msg-erro{display:none;font-size:13px;color:var(--erro);margin-top:2px}
-.invalido > .msg-erro,.msg-erro.on{display:block}
-.intro-final{color:var(--tinta-2);margin:-8px 0 8px}
-.consent{display:flex;gap:12px;align-items:flex-start;margin-top:20px;font-size:13.5px;line-height:1.55;color:var(--tinta-2);cursor:pointer}
-.consent input{flex:none;width:20px;height:20px;margin:1px 0 0;accent-color:var(--ouro)}
-.consent a{color:var(--ouro-txt)}
-.acoes{display:flex;align-items:center;gap:14px;margin-top:28px}
-.acoes .btn{flex:1}
-.btn-voltar{min-height:46px;padding:0 6px;background:none;border:0;cursor:pointer;font-size:14.5px;font-weight:500;color:var(--tinta-2);display:inline-flex;align-items:center;gap:8px}
-.btn-voltar:hover{color:var(--tinta)}
-.btn-voltar[hidden]{display:none}
-.btn[disabled]{opacity:.55;cursor:not-allowed;transform:none;box-shadow:none}
-.btn .spin{width:18px;height:18px;border-radius:50%;border:2px solid rgba(255,255,255,.35);border-top-color:#fff;animation:gira .8s linear infinite;display:none}
-.btn.carregando .spin{display:inline-block}
-.btn.carregando .seta{display:none}
-@keyframes gira{to{transform:rotate(360deg)}}
-.alerta{display:none;margin-top:18px;padding:14px 16px;border-radius:12px;background:#FBEAE6;border:1px solid #E8B4A8;color:#7A2414;font-size:14px;line-height:1.5}
-.alerta.on{display:block}
-.sucesso{text-align:center;padding:16px 0 4px}
-.sucesso .ok{width:64px;height:64px;margin:0 auto 22px;border-radius:50%;display:grid;place-items:center;background:#F3EAD3;color:var(--ouro-txt)}
-.sucesso .ok svg{width:28px;height:28px}
-.sucesso h3{font-size:24px;margin-bottom:10px}
-.sucesso p{color:var(--tinta-2);max-width:42ch;margin:0 auto 26px}
-.sucesso .redir{font-size:13px;color:var(--tinta-3);margin-top:16px}
-.prova-nota{margin-top:18px;font-size:12px;color:var(--tinta-3);text-align:center}
-
+.contato-card{background:var(--papel);color:var(--tinta);border-radius:var(--raio-g);padding:clamp(22px,2.6vw,36px);box-shadow:0 40px 80px -40px rgba(0,0,0,.7);scroll-margin-top:calc(var(--header) + 16px)}
 /* ---------- rodapé ---------- */
 .rodape{background:#0F0D0B;color:var(--claro-2);padding:clamp(48px,6vw,72px) 0 24px;font-size:13px}
 .rodape-grid{display:grid;grid-template-columns:1.1fr 1fr 1fr 1fr;gap:32px;padding-bottom:40px;border-bottom:1px solid var(--linha-escura)}
@@ -298,12 +253,10 @@ p{margin:0 0 1em}
 .rodape h4{margin:0 0 10px;font-size:12px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--ouro-luz)}
 .rodape p{margin:0 0 6px}
 .rodape a{color:var(--claro);text-underline-offset:4px}
-.rodape .pend{color:#E9B48F;font-style:italic}
 .rodape .legal{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;font-size:13.5px}
 .rodape .legal dt{color:var(--claro)}
 .rodape .legal dd{margin:0}
 .rodape .base{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-top:24px;font-size:12.5px;color:#8C8378}
-.rodape .base .proto{color:#E9B48F}
 
 /* ---------- WhatsApp flutuante ---------- */
 .wpp{position:fixed;right:20px;bottom:20px;z-index:40;display:flex;align-items:center;gap:12px}
@@ -360,9 +313,7 @@ p{margin:0 0 1em}
   .wpp{right:14px;bottom:14px}
   .wpp a{width:54px;height:54px}
   .wpp .balao{display:none}
-  .acoes{flex-direction:column-reverse;align-items:stretch}
-  .btn-voltar{justify-content:center}
-  .form-card{padding:22px 18px}
+  .contato-card{padding:22px 18px}
 }
 @media (max-width:480px){
   .topo .btn{padding:9px 14px;font-size:13px}
@@ -465,11 +416,6 @@ p{margin:0 0 1em}
             <span class="trat-mais" aria-hidden="true">+</span>
           </article>
           <article class="trat" tabindex="0">
-            <img src="images/liftera.webp" alt="Procedimento facial" width="700" height="1138" loading="lazy" style="object-position:40% 30%">
-            <div class="trat-txt"><h3>Harmonização e preenchimentos</h3><div class="trat-desc"><div><p>Procedimentos como preenchimentos e rinomodelação podem ser considerados de acordo com a anatomia e as proporções de cada paciente.</p></div></div></div>
-            <span class="trat-mais" aria-hidden="true">+</span>
-          </article>
-          <article class="trat" tabindex="0">
             <img src="images/consultorio.webp" alt="Consultório da Supreme" width="1400" height="935" loading="lazy" style="object-position:30% 50%">
             <div class="trat-txt"><h3>Dermatologia clínica</h3><div class="trat-desc"><div><p>Acompanhamento de acne, melasma, rosácea, hiperidrose, dermatites e avaliação de alterações relacionadas ao câncer de pele.</p></div></div></div>
             <span class="trat-mais" aria-hidden="true">+</span>
@@ -508,9 +454,9 @@ p{margin:0 0 1em}
       <p class="lead" style="margin-top:22px">A Supreme dispõe de tecnologias que podem fazer parte dos cuidados com firmeza, rejuvenescimento, qualidade da pele, contorno corporal e depilação. A escolha é feita depois da consulta, de acordo com a indicação médica.</p>
       <div class="tec-grupos">
         <div class="grupo"><h3>Face e pele</h3>
-          <p>Oligio X · Fotona 5D · Fotona StarWalker · Liftera · Coolfase · Mesoject · MMP · Sofwave · Laser CO₂ Fracionado · SylfirmX</p></div>
+          <p>Oligio X · Fotona 5D · Fotona StarWalker · Liftera · Coolfase · Mesoject · MMP · Sofwave · Laser CO₂ Fracionado · SylfirmX · Elleva Max · Xerf</p></div>
         <div class="grupo"><h3>Corpo</h3>
-          <p>Lipo AI · Scizer · AlmaPrime · Onda · Cooltech · Legacy · Endolaser · BodyShape</p></div>
+          <p>Lipo AI · Scizer · AlmaPrime · Onda · Cooltech · Legacy · Endolaser · BodyShape · Elleva Max · Xerf</p></div>
         <div class="grupo"><h3>Depilação</h3>
           <p>Ácrus</p></div>
       </div>
@@ -538,6 +484,7 @@ p{margin:0 0 1em}
         <details><summary>Emagrecimento com acompanhamento médico</summary><p>Conduta definida após consulta, considerando o quadro clínico e as necessidades identificadas.</p></details>
         <details><summary>Acompanhamento nutricional</summary><p>Orientação relacionada à alimentação quando indicada dentro do plano de cuidado.</p></details>
         <details><summary>Menopausa e andropausa</summary><p>Avaliação de queixas e mudanças percebidas nessas fases da vida.</p></details>
+        <details><summary>Reposição hormonal</summary><p>A possibilidade de reposição hormonal depende de avaliação médica individual, exames e indicação para cada paciente.</p></details>
         <details><summary>Performance física e esportiva</summary><p>Acompanhamento relacionado à composição corporal, prática física e objetivos de desempenho. Quando houver indicação, a nutrologia pode ser integrada a outros cuidados realizados na Supreme.</p></details>
       </div>
       <a class="btn btn-ouro" href="#contato" data-area="nutri">Solicitar avaliação em nutrologia <span class="seta"><svg><use href="#i-seta"/></svg></span></a>
@@ -545,12 +492,12 @@ p{margin:0 0 1em}
   </div>
 </section>
 
-<!-- ===================== 05 · PROCEDIMENTOS E SUPREME CARE ===================== -->
+<!-- ===================== 05 · PROCEDIMENTOS E SUPREME DAY ===================== -->
 <section class="sec proc" id="procedimentos" aria-labelledby="h-proc">
   <div class="wrap">
     <div class="sec-head rv">
       <div>
-        <p class="kicker">Procedimentos e Supreme Care</p>
+        <p class="kicker">Procedimentos e Supreme Day</p>
         <!-- COPY: Seção 05 -->
         <h2 id="h-proc">A Supreme também realiza procedimentos cirúrgicos e atendimentos planejados em conjunto</h2>
       </div>
@@ -567,8 +514,8 @@ p{margin:0 0 1em}
       <article class="painel painel-care rv">
         <div class="foto"><img src="images/supreme-care.webp" alt="Paciente em momento de descanso" width="900" height="1350" loading="lazy"></div>
         <div class="corpo">
-          <h3>Supreme Care</h3>
-          <p>Quando mais de um procedimento é indicado, o Supreme Care permite organizar diferentes etapas do atendimento em um mesmo dia.</p>
+          <h3>Supreme Day</h3>
+          <p>Quando mais de um procedimento é indicado, o Supreme Day permite organizar diferentes etapas do atendimento em um mesmo dia.</p>
           <p class="nota">A combinação depende do que pode ser realizado com segurança para cada paciente. A sedação pode ser considerada quando houver indicação médica.</p>
         </div>
       </article>
@@ -597,9 +544,8 @@ p{margin:0 0 1em}
         <div class="info">
           <span class="area">Dermatologia</span>
           <h3>Dra. Maria Lígia Mendonça</h3>
-          <p>Dermatologista e mentora na formação de médicos na área estética.</p>
-          <!-- PENDÊNCIA (observação em vermelho na copy) -->
-          <p class="pendencia">[validar CRM, RQE, títulos e informação sobre mentoria antes da publicação.]</p>
+          <p>Atendimento em dermatologia na Supreme.</p>
+          <p>CRM-GO 14358 · RQE 8544</p>
         </div>
       </article>
       <article class="doc rv">
@@ -607,8 +553,8 @@ p{margin:0 0 1em}
         <div class="info">
           <span class="area">Nutrologia</span>
           <h3>Dr. Arthur Rocha</h3>
-          <p>Nutrólogo e fundador da Supreme.</p>
-          <p class="pendencia">[validar CRM, RQE, títulos e informação sobre mentoria antes da publicação.]</p>
+          <p>Atendimento em nutrologia na Supreme.</p>
+          <p>Responsável técnico · CRM-GO 13053 · RQE 14529</p>
         </div>
       </article>
     </div>
@@ -656,38 +602,14 @@ p{margin:0 0 1em}
   <div class="wrap contato-grid">
     <div class="rv">
       <p class="kicker">Fale com a Supreme</p>
-      <!-- COPY: Seção 07 -->
-      <h2 id="h-contato">Conte qual é a sua principal queixa</h2>
-      <p class="lead">Você não precisa saber qual procedimento ou tecnologia procurar. Conte o que gostaria de cuidar para que a equipe direcione seu atendimento.</p>
+      <h2 id="h-contato">Converse com a equipe Supreme</h2>
+      <p class="lead">Conte à equipe o que você procura para receber orientação sobre o agendamento de uma avaliação.</p>
     </div>
-
-    <!-- FORMULÁRIO QUALIFICATIVO (protótipo visual: sem integração) -->
-    <div class="form-card rv" id="form-card">
-      <form id="form" novalidate aria-labelledby="form-titulo">
-        <h3 id="form-titulo" class="sr-only">Formulário de solicitação de avaliação</h3>
-        <div class="progresso" aria-hidden="false">
-          <div class="barra" role="progressbar" aria-label="Progresso do formulário" aria-valuemin="1" aria-valuemax="6" aria-valuenow="1"><i></i></div>
-          <span id="prog-txt">Etapa 1 de 6</span>
-        </div>
-        <div class="area-atual" id="area-atual" hidden>
-          <span>Área: <b id="area-nome"></b></span>
-          <button type="button" id="trocar-area">Alterar área</button>
-        </div>
-        <div id="etapa-host" aria-live="polite"></div>
-        <div class="alerta" id="alerta" role="alert"></div>
-        <div class="acoes" id="acoes">
-          <button type="button" class="btn-voltar" id="voltar" hidden><svg width="16" height="16"><use href="#i-volta"/></svg>Voltar</button>
-          <button type="submit" class="btn btn-ouro" id="avancar"><span class="txt">Continuar</span><span class="spin" aria-hidden="true"></span><span class="seta"><svg><use href="#i-seta"/></svg></span></button>
-        </div>
-      </form>
-      <!-- Página após o envio (COPY) -->
-      <div class="sucesso" id="sucesso" hidden tabindex="-1">
-        <div class="ok"><svg><use href="#i-check"/></svg></div>
-        <h3>Recebemos sua solicitação</h3>
-        <p>Continue pelo WhatsApp para falar com a equipe Supreme e dar sequência ao atendimento.</p>
-        <a class="btn btn-ouro" id="btn-wpp" href="#" target="_blank" rel="noopener">Continuar no WhatsApp <span class="seta"><svg><use href="#i-seta"/></svg></span></a>
-        <p class="redir">Protótipo: na versão final o encaminhamento ao WhatsApp é automático após o registro.</p>
-      </div>
+    <div class="contato-card rv contato-direto">
+      <h3>Agende sua avaliação</h3>
+      <p>O contato é feito diretamente pelo WhatsApp da clínica. Nenhum dado é registrado nesta página.</p>
+      <a class="btn btn-ouro" href="https://wa.me/5562991789330" target="_blank" rel="noopener noreferrer">Conversar pelo WhatsApp <span class="seta"><svg><use href="#i-seta"/></svg></span></a>
+      <p>Se preferir, ligue para <a href="tel:+5562991789330">(62) 9 9178-9330</a>.</p>
     </div>
   </div>
 </section>
@@ -711,225 +633,33 @@ p{margin:0 0 1em}
         <h4>WhatsApp</h4>
         <p><a href="tel:+5562991789330">(62) 9 9178-9330</a></p>
         <h4 style="margin-top:22px">Horários</h4>
-        <p class="pend">[a confirmar com a clínica]</p>
-        <h4 style="margin-top:22px">Política de Privacidade</h4>
-        <p class="pend">[INSERIR LINK]</p>
+        <p>08h00 às 18h00</p>
       </div>
       <div>
         <dl class="legal">
-          <dt>Responsável técnico</dt><dd class="pend">[VALIDAR]</dd>
-          <dt>CRM / RQE</dt><dd class="pend">[VALIDAR]</dd>
-          <dt>CNPJ</dt><dd class="pend">[VALIDAR]</dd>
+          <dt>Responsável técnico</dt><dd>Dr. Arthur Rocha</dd>
+          <dt>CRM-GO / RQE</dt><dd>13053 / 14529</dd>
+          <dt>CNPJ</dt><dd>29.196.604/0001-37</dd>
         </dl>
-        <p class="pend" style="margin-top:14px;font-size:12.5px">[DEMAIS INFORMAÇÕES LEGAIS E MÉDICAS OBRIGATÓRIAS APÓS VALIDAÇÃO]</p>
       </div>
     </div>
     <div class="base">
       <span>© <span id="ano">2026</span> Clínica Supreme</span>
-      <span class="proto">Protótipo para validação interna · 3ADS</span>
+      <span>Desenvolvido por 3ADS</span>
     </div>
   </div>
 </footer>
 
-<!-- WhatsApp visual: leva ao formulário (briefing: responder as perguntas antes) -->
+<!-- Contato direto com a clínica -->
 <div class="wpp" id="wpp">
-  <span class="balao" id="wpp-txt">Responda algumas perguntas rápidas e continue o atendimento pelo WhatsApp.</span>
-  <a href="#contato" data-area="" aria-label="Falar com a Supreme pelo WhatsApp. Antes, responda algumas perguntas rápidas." aria-describedby="wpp-txt"><svg><use href="#i-wpp"/></svg></a>
+  <span class="balao" id="wpp-txt">Fale diretamente com a equipe Supreme.</span>
+  <a href="https://wa.me/5562991789330" target="_blank" rel="noopener noreferrer" aria-label="Falar com a Supreme pelo WhatsApp" aria-describedby="wpp-txt"><svg><use href="#i-wpp"/></svg></a>
 </div>
 
 <script>
 (() => {
-  const CONFIG = {
-    whatsapp: '5562991789330',
-    mensagem: 'Olá! Acabei de preencher o formulário no site da Supreme e gostaria de continuar meu atendimento para agendar uma avaliação.'
-  };
-
-  /* Perguntas do briefing de formulário (subtarefa "Briefing desenvolvimento de formulário + integrações") */
-  const AREAS = {
-    derm: { label:'Dermatologia e tratamentos faciais',
-      q2:{ t:'Qual tipo de atendimento dermatológico mais interessa a você?', o:['Natural Lift e rejuvenescimento facial.','Harmonização e preenchimentos faciais.','Qualidade da pele, manchas e cicatrizes.','Dermatologia clínica.','Tratamentos para queda de cabelo.','Quero orientação sobre as opções.'] },
-      q3:{ t:'Que tipo de atendimento você procura?', o:['Primeira avaliação.','Tratamento específico.','Continuidade de acompanhamento.','Preciso de orientação.'] } },
-    tec: { label:'Tecnologias estéticas faciais e corporais',
-      q2:{ t:'Qual resultado ou tipo de tratamento você procura?', o:['Rejuvenescimento e firmeza facial.','Melhora da textura e qualidade da pele.','Gordura localizada e contorno corporal.','Flacidez e celulite.','Depilação a laser.','Conhecer as tecnologias disponíveis.'] },
-      q3:{ t:'Você já conhece a tecnologia que gostaria de avaliar?', o:['Sim, tenho uma em mente.','Quero entender as diferenças.','Gostaria de uma indicação profissional.'] } },
-    nutri: { label:'Nutrologia e emagrecimento',
-      q2:{ t:'Qual é o principal motivo do seu interesse?', o:['Emagrecimento com acompanhamento médico.','Saúde e equilíbrio hormonal.','Menopausa ou andropausa.','Performance física e esportiva.','Acompanhamento nutricional.','Avaliação nutrológica geral.'] },
-      q3:{ t:'Qual tipo de acompanhamento procura?', o:['Primeira consulta.','Acompanhamento contínuo.','Quero entender qual abordagem é indicada.'] } },
-    cir: { label:'Procedimentos cirúrgicos',
-      q2:{ t:'Qual procedimento gostaria de conhecer?', o:['Blefaroplastia.','Lipo AI de papada.','Lipo AI corporal.','Transplante capilar.','Ninfoplastia.','Quero orientação sobre os procedimentos.'] },
-      q3:{ t:'Em qual etapa você está?', o:['Pesquisando possibilidades.','Quero agendar uma avaliação.','Já passei por avaliação e busco outra opinião.'] } },
-    care: { label:'Supreme Care',
-      q2:{ t:'O que mais interessa a você no Supreme Care?', o:['Conhecer a experiência Supreme Care.','Avaliar a possibilidade de realizar diferentes tratamentos no mesmo dia.','Agendar uma avaliação personalizada.'] },
-      q3:{ t:'Como gostaria de iniciar?', o:['Conhecendo a experiência.','Avaliando possíveis procedimentos.','Agendando uma avaliação personalizada.'] } },
-    indef: { label:'Ainda não sei qual tratamento procurar',
-      q2:{ t:'Qual assunto mais se aproxima do que você procura?', o:['Pele e rejuvenescimento facial.','Estética corporal.','Emagrecimento e saúde metabólica.','Procedimentos cirúrgicos.','Atendimento integrado e personalizado.','Prefiro conversar com a equipe.'] },
-      q3:{ t:'Como podemos ajudar inicialmente?', o:['Quero conhecer as opções.','Gostaria de agendar uma avaliação.','Prefiro falar com a equipe.'] } }
-  };
-  const Q1 = { t:'Qual área da Supreme você gostaria de conhecer melhor?' };
-  Q1.o = [
-    {v:'derm',l:'Dermatologia e tratamentos faciais.'},{v:'tec',l:'Tecnologias estéticas faciais e corporais.'},{v:'nutri',l:'Nutrologia e emagrecimento.'},
-    {v:'cir',l:'Procedimentos cirúrgicos.'},{v:'care',l:'Supreme Care.'},{v:'indef',l:'Ainda não sei qual tratamento procurar.'}
-  ];
-  const Q4 = { t:'Quando você gostaria de agendar seu atendimento?', o:['O quanto antes.','Nos próximos 30 dias.','Entre 1 e 3 meses.','Ainda estou pesquisando.'] };
-  const Q5 = { t:'De qual cidade você viria para a Supreme?', o:['Goiânia.','Aparecida de Goiânia.','Senador Canedo.','Trindade.','Anápolis.','Outra cidade.'] };
-  const TOTAL = 6;
-
-  const st = { etapa:1, area:'', q2:'', q3:'', prazo:'', cidade:'', cidadeOutra:'', nome:'', whats:'', consent:false, enviando:false, enviado:false };
-
-  const $ = s => document.querySelector(s);
-  const host = $('#etapa-host'), form = $('#form'), alerta = $('#alerta');
-  const btnAv = $('#avancar'), btnVolta = $('#voltar');
-
-  const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-  const semPonto = s => s.replace(/\.$/,'');
-
-  function opcoes(nome, lista, sel){
-    return '<div class="opcoes">' + lista.map((o,i) => {
-      const v = typeof o === 'string' ? o : o.v, l = typeof o === 'string' ? o : o.l;
-      return `<label class="opcao"><input type="radio" name="${nome}" value="${esc(v)}" ${v===sel?'checked':''}><span>${esc(semPonto(l))}</span></label>`;
-    }).join('') + '</div><p class="msg-erro" id="erro-'+nome+'">Escolha uma opção para continuar.</p>';
-  }
-
-  function render(focar){
-    alerta.classList.remove('on');
-    const e = st.etapa, a = AREAS[st.area];
-    let h = '';
-    if (e === 1) h = `<fieldset class="etapa"><legend tabindex="-1">${Q1.t}</legend>${opcoes('area', Q1.o, st.area)}</fieldset>`;
-    if (e === 2) h = `<fieldset class="etapa"><legend tabindex="-1">${a.q2.t}</legend>${opcoes('q2', a.q2.o, st.q2)}</fieldset>`;
-    if (e === 3) h = `<fieldset class="etapa"><legend tabindex="-1">${a.q3.t}</legend>${opcoes('q3', a.q3.o, st.q3)}</fieldset>`;
-    if (e === 4) h = `<fieldset class="etapa"><legend tabindex="-1">${Q4.t}</legend>${opcoes('prazo', Q4.o, st.prazo)}</fieldset>`;
-    if (e === 5) h = `<fieldset class="etapa"><legend tabindex="-1">${Q5.t}</legend>${opcoes('cidade', Q5.o, st.cidade)}
-        <div class="campo" id="campo-outra" ${st.cidade==='Outra cidade.'?'':'hidden'}>
-          <label for="cidade-outra">Cidade e UF</label>
-          <input type="text" id="cidade-outra" autocomplete="address-level2" placeholder="Ex.: Rio Verde, GO" value="${esc(st.cidadeOutra)}">
-          <p class="msg-erro">Informe a cidade e a UF.</p>
-        </div></fieldset>`;
-    if (e === 6) h = `<fieldset class="etapa"><legend tabindex="-1">Para finalizar, informe seus dados para continuar o atendimento com a equipe Supreme.</legend>
-        <div class="campo" id="campo-nome"><label for="nome">Como podemos chamar você?</label>
-          <input type="text" id="nome" autocomplete="given-name" value="${esc(st.nome)}" aria-describedby="erro-nome">
-          <p class="msg-erro" id="erro-nome">Informe como podemos chamar você.</p></div>
-        <div class="campo" id="campo-whats"><label for="whats">Qual número podemos utilizar para entrar em contato?</label>
-          <input type="tel" id="whats" inputmode="tel" autocomplete="tel-national" placeholder="(62) 9 0000-0000" value="${esc(st.whats)}" aria-describedby="dica-whats erro-whats">
-          <span class="dica" id="dica-whats">WhatsApp com DDD</span>
-          <p class="msg-erro" id="erro-whats">Informe um WhatsApp válido com DDD.</p></div>
-        <div id="campo-consent">
-          <label class="consent"><input type="checkbox" id="consent" ${st.consent?'checked':''}>
-            <span>Concordo com o uso dos meus dados para que a equipe Supreme entre em contato sobre o atendimento, conforme a <a href="#" onclick="return false">Política de Privacidade</a>. <em style="color:#8A3B12">[texto do consentimento a validar pela clínica]</em></span></label>
-          <p class="msg-erro" id="erro-consent">É preciso concordar para enviar a solicitação.</p></div>
-        </fieldset>`;
-    host.innerHTML = h;
-
-    // área visível e editável a partir da etapa 2
-    const box = $('#area-atual');
-    box.hidden = !(e > 1 && st.area);
-    if (st.area) $('#area-nome').textContent = semPonto(AREAS[st.area].label);
-
-    btnVolta.hidden = e === 1;
-    btnAv.querySelector('.txt').textContent = e === TOTAL ? 'Enviar e continuar no WhatsApp' : 'Continuar';
-    const pct = Math.round((e / TOTAL) * 100);
-    $('.progresso .barra i').style.width = pct + '%';
-    $('.progresso .barra').setAttribute('aria-valuenow', e);
-    $('#prog-txt').textContent = `Etapa ${e} de ${TOTAL}`;
-
-    bindEtapa();
-    if (focar) host.querySelector('legend')?.focus({preventScroll:true});
-  }
-
-  function bindEtapa(){
-    host.querySelectorAll('input[type=radio]').forEach(r => r.addEventListener('change', () => {
-      const n = r.name, v = r.value;
-      if (n === 'area') { if (st.area !== v) { st.q2 = ''; st.q3 = ''; } st.area = v; }
-      else st[n] = v;
-      if (n === 'cidade') { const c = $('#campo-outra'); c.hidden = v !== 'Outra cidade.'; if (!c.hidden) $('#cidade-outra').focus(); }
-      host.querySelector('#erro-' + n)?.classList.remove('on');
-    }));
-    const co = $('#cidade-outra'); if (co) co.addEventListener('input', () => { st.cidadeOutra = co.value; $('#campo-outra').classList.remove('invalido'); });
-    const nm = $('#nome'); if (nm) nm.addEventListener('input', () => { st.nome = nm.value; $('#campo-nome').classList.remove('invalido'); });
-    const wp = $('#whats'); if (wp) wp.addEventListener('input', () => { wp.value = mascara(wp.value); st.whats = wp.value; $('#campo-whats').classList.remove('invalido'); });
-    const cs = $('#consent'); if (cs) cs.addEventListener('change', () => { st.consent = cs.checked; $('#erro-consent').classList.remove('on'); });
-  }
-
-  function digitos(v){ let d = v.replace(/\D/g,''); if (d.length > 11 && d.startsWith('55')) d = d.slice(2); return d.slice(0,11); }
-  function mascara(v){
-    const d = digitos(v);
-    if (d.length <= 2) return d.length ? '(' + d : '';
-    if (d.length <= 6) return `(${d.slice(0,2)}) ${d.slice(2)}`;
-    if (d.length <= 10) return `(${d.slice(0,2)}) ${d.slice(2,6)}-${d.slice(6)}`;
-    return `(${d.slice(0,2)}) ${d.slice(2,3)} ${d.slice(3,7)}-${d.slice(7)}`;
-  }
-  function whatsValido(v){
-    const d = digitos(v);
-    if (!(d.length === 10 || d.length === 11)) return false;
-    if (+d.slice(0,2) < 11) return false;
-    if (d.length === 11 && d[2] !== '9') return false;
-    return true;
-  }
-
-  function valida(){
-    const e = st.etapa;
-    const req = {1:'area',2:'q2',3:'q3',4:'prazo',5:'cidade'}[e];
-    if (req && !st[req]) { $('#erro-' + req).classList.add('on'); host.querySelector('input')?.focus(); return false; }
-    if (e === 5 && st.cidade === 'Outra cidade.' && st.cidadeOutra.trim().length < 3) { $('#campo-outra').classList.add('invalido'); $('#cidade-outra').focus(); return false; }
-    if (e === 6) {
-      let ok = true, foco = null;
-      if (st.nome.trim().length < 2) { $('#campo-nome').classList.add('invalido'); foco = foco || $('#nome'); ok = false; }
-      if (!whatsValido(st.whats)) { $('#campo-whats').classList.add('invalido'); foco = foco || $('#whats'); ok = false; }
-      if (!st.consent) { $('#erro-consent').classList.add('on'); foco = foco || $('#consent'); ok = false; }
-      if (foco) foco.focus();
-      return ok;
-    }
-    return true;
-  }
-
-  form.addEventListener('submit', ev => {
-    ev.preventDefault();
-    if (st.enviando || !valida()) return;
-    if (st.etapa < TOTAL) { st.etapa++; render(true); return; }
-    enviar();
-  });
-  btnVolta.addEventListener('click', () => { if (st.etapa > 1 && !st.enviando) { st.etapa--; render(true); } });
-  $('#trocar-area').addEventListener('click', () => { st.etapa = 1; render(true); });
-
-  // Protótipo: simula a gravação. ?simular=erro mostra o estado de falha.
-  function enviar(){
-    st.enviando = true;
-    btnAv.classList.add('carregando'); btnAv.disabled = true; btnVolta.disabled = true;
-    btnAv.querySelector('.txt').textContent = 'Enviando...';
-    const falha = new URLSearchParams(location.search).get('simular') === 'erro' && !st.tentouErro;
-    setTimeout(() => {
-      st.enviando = false; btnAv.classList.remove('carregando'); btnAv.disabled = false; btnVolta.disabled = false;
-      if (falha) {
-        st.tentouErro = true;
-        btnAv.querySelector('.txt').textContent = 'Tentar novamente';
-        alerta.innerHTML = 'Não conseguimos registrar sua solicitação agora. Seus dados continuam preenchidos: tente novamente em instantes.';
-        alerta.classList.add('on');
-        return;
-      }
-      st.enviado = true;
-      form.hidden = true;
-      $('#btn-wpp').href = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(CONFIG.mensagem)}`;
-      const s = $('#sucesso'); s.hidden = false; s.focus();
-    }, 1400);
-  }
-
-  // CTAs: todos abrem o mesmo formulário; CTAs de área preenchem a área e começam na pergunta 2
-  document.querySelectorAll('a[data-area]').forEach(a => a.addEventListener('click', ev => {
-    ev.preventDefault();
-    if (!st.enviado) {
-      const area = a.dataset.area;
-      if (area) { if (st.area !== area) { st.q2 = ''; st.q3 = ''; } st.area = area; st.etapa = 2; }
-      else st.etapa = 1;
-      render(false);
-    }
-    $('#form-card').scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block:'start'});
-    setTimeout(() => (st.enviado ? $('#sucesso') : host.querySelector('legend'))?.focus({preventScroll:true}), 600);
-  }));
-
-  render(false);
-
-  // botão flutuante some quando o formulário está na tela
-  const wpp = $('#wpp');
-  new IntersectionObserver(([en]) => wpp.classList.toggle('oculto', en.isIntersecting), {threshold:.15}).observe($('#contato'));
+  const wpp = document.querySelector('#wpp');
+  new IntersectionObserver(([entry]) => wpp.classList.toggle('oculto', entry.isIntersecting), {threshold:.15}).observe(document.querySelector('#contato'));
 
   // entrada suave
   const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }), {rootMargin:'0px 0px -8% 0px'});
@@ -969,7 +699,7 @@ p{margin:0 0 1em}
     t.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); alterna(); } });
   });
 
-  $('#ano').textContent = new Date().getFullYear();
+  document.querySelector('#ano').textContent = new Date().getFullYear();
 })();
 </script>
 </body>
