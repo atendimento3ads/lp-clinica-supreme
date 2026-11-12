@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Clínica Supreme · Dermatologia, nutrologia e tecnologias em Goiânia</title>
 <meta name="description" content="A Supreme reúne diferentes áreas de atendimento em uma mesma estrutura no Setor Bueno, em Goiânia.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://fullbodyexperience.com.br/">
+<!-- Prévia para aprovação da clínica; domínio definitivo pendente -->
+<meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#15120F">
 <link rel="icon" type="image/png" href="images/brand/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -204,6 +204,15 @@ p{margin:0 0 1em}
 .contato-direto .btn{margin:8px 0 20px}
 .contato-direto a:not(.btn){color:var(--ouro-txt)}
 
+/* ---------- resultados: imagens completas, sem recorte ou faixas vazias ---------- */
+.resultados{background:var(--papel-2)}
+.resultados .sec-head{max-width:900px}
+.resultados-grid{columns:3;column-gap:clamp(14px,2vw,24px)}
+.resultado{display:inline-block;width:100%;margin:0 0 clamp(14px,2vw,24px);background:var(--branco);border:1px solid var(--linha);border-radius:var(--raio-g);overflow:hidden;break-inside:avoid}
+.resultado img{display:block;width:100%;height:auto}
+.resultado figcaption{padding:14px 18px;color:var(--tinta-2);font-size:13px}
+.resultados-nota{max-width:90ch;margin:24px 0 0;color:var(--tinta-2);font-size:13px}
+
 /* ---------- 06 médicos e estrutura ---------- */
 .medicos{background:var(--branco)}
 .docs{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2.4vw,28px)}
@@ -292,6 +301,7 @@ p{margin:0 0 1em}
   .tec-foto{min-height:0;aspect-ratio:4/3.4;max-width:560px}
   .nutri-foto{aspect-ratio:4/4.4;max-width:520px}
   .rodape-grid{grid-template-columns:1fr 1fr}
+  .resultados-grid{columns:2}
 }
 @media (max-width:760px){
   .docs{grid-template-columns:1fr}
@@ -310,6 +320,7 @@ p{margin:0 0 1em}
   .doc{grid-template-columns:1fr}
   .doc .foto{aspect-ratio:4/3.6;min-height:0}
   .rodape-grid{grid-template-columns:1fr}
+  .resultados-grid{columns:1}
   .wpp{right:14px;bottom:14px}
   .wpp a{width:54px;height:54px}
   .wpp .balao{display:none}
@@ -597,7 +608,29 @@ p{margin:0 0 1em}
   </div>
 </section>
 
-<!-- ===================== 07 · FALE COM A SUPREME ===================== -->
+<!-- ===================== 07 · RESULTADOS CLÍNICOS ===================== -->
+<section class="sec resultados" id="resultados" aria-labelledby="h-resultados">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <p class="kicker">Antes e depois</p>
+        <h2 id="h-resultados">Registros de resultados individuais</h2>
+      </div>
+      <p class="lead">Imagens de diferentes atendimentos disponibilizadas pela clínica. A indicação e a evolução dependem da avaliação e das características de cada paciente.</p>
+    </div>
+    <div class="resultados-grid">
+      <figure class="resultado rv"><img src="images/resultados/antes-depois-regiao-labial.webp" width="726" height="1280" alt="Comparação antes e depois de atendimento labial" loading="lazy"><figcaption>Região labial</figcaption></figure>
+      <figure class="resultado rv"><img src="images/resultados/antes-depois-papada.webp" width="1200" height="860" alt="Comparação antes e depois da região da papada" loading="lazy"><figcaption>Região da papada</figcaption></figure>
+      <figure class="resultado rv"><img src="images/resultados/antes-depois-abdomen.webp" width="1200" height="686" alt="Comparação antes e depois da região abdominal" loading="lazy"><figcaption>Região abdominal</figcaption></figure>
+      <figure class="resultado rv"><img src="images/resultados/antes-depois-celulite.webp" width="1200" height="600" alt="Comparação antes e depois de aspecto da pele nas pernas" loading="lazy"><figcaption>Aspecto da pele nas pernas</figcaption></figure>
+      <figure class="resultado rv"><img src="images/resultados/antes-depois-gluteos.webp" width="1200" height="936" alt="Comparação antes e depois da região dos glúteos" loading="lazy"><figcaption>Região dos glúteos</figcaption></figure>
+      <figure class="resultado rv"><img src="images/resultados/antes-depois-contorno-costas.webp" width="1077" height="375" alt="Comparação antes e depois de contorno das costas" loading="lazy"><figcaption>Contorno das costas</figcaption></figure>
+    </div>
+    <p class="resultados-nota rv">Os registros não representam garantia de resultado. A indicação, as limitações, os fatores que influenciam a evolução e as possíveis complicações devem ser discutidos em consulta.</p>
+  </div>
+</section>
+
+<!-- ===================== 08 · FALE COM A SUPREME ===================== -->
 <section class="sec contato dark" id="contato" aria-labelledby="h-contato">
   <div class="wrap contato-grid">
     <div class="rv">
@@ -645,7 +678,7 @@ p{margin:0 0 1em}
     </div>
     <div class="base">
       <span>© <span id="ano">2026</span> Clínica Supreme</span>
-      <span>Desenvolvido por 3ADS</span>
+      <span>Desenvolvido por <a href="https://3ads.com.br/" target="_blank" rel="noopener noreferrer">3ADS</a></span>
     </div>
   </div>
 </footer>

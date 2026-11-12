@@ -2,9 +2,8 @@
 
 Landing page geral da Clínica Supreme (Goiânia). Tarefa no 3ADS Flow: **[CLÍNICA SUPREME] LP GERAL**.
 
-- **Domínio final:** https://fullbodyexperience.com.br/
 - **Prévia pública:** https://atendimento3ads.github.io/lp-clinica-supreme/
-- **Status:** versão de contato direto preparada para o domínio final. A galeria de pacientes e o formulário de captura permanecem fora desta versão.
+- **Status:** prévia para aprovação da clínica, sem indexação. O domínio definitivo ainda não está definido.
 - **Página:** `index.html` (HTML + CSS + JS em arquivo único, sem framework). Imagens em `images/`.
 
 ## Fontes do conteúdo
@@ -28,8 +27,9 @@ Landing page geral da Clínica Supreme (Goiânia). Tarefa no 3ADS Flow: **[CLÍN
 - Todos os CTAs levam ao bloco de contato; os botões desse bloco e o botão flutuante abrem o WhatsApp da clínica sem incluir informações de saúde na URL.
 - Nenhum formulário ou confirmação simulada aparece nesta prévia. A integração com planilha ainda não existe.
 - Os ajustes de copy estão aplicados: Supreme Day, reposição hormonal, Elleva Max e Xerf, dados dos médicos e da clínica. O card de harmonização indicado na tarefa foi removido.
-- As imagens de antes/depois seguem apenas no checkout local de preparação, sem envio ao GitHub, enquanto não houver autorização de uso dos pacientes e revisão clínica do conjunto.
-- O domínio final definido por Thiago é `fullbodyexperience.com.br`. O GitHub Pages continua como prévia e declara o domínio final como URL canônica.
+- A galeria reúne seis comparações recebidas pelo Drive da clínica, em WebP, exibidas na proporção original para preservar cada registro completo. A clínica ainda precisa confirmar a autorização individual de publicação e revisar o conjunto com o responsável técnico antes de usar a página como publicação final.
+- A prévia não tem receita de deploy para o cPanel. `fullbodyexperience.com.br` pertence à LP do evento Full Body Experience e foi restaurado após a associação indevida.
 - Falta a Política de Privacidade aprovada pela clínica antes de ativar um formulário que colete dados.
+- O crédito do rodapé liga para https://3ads.com.br/.
 
 Desenvolvido por **3ADS**.

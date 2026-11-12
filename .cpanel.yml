@@ -1,7 +1,0 @@
----
-deployment:
-  tasks:
-    - export DEPLOYPATH=/home2/hg3ads37/fullbodyexperience.com.br/
-    - /bin/mkdir -p "$DEPLOYPATH/images" "$DEPLOYPATH/images/brand"
-    - /bin/cp index.html "$DEPLOYPATH/index.html"
-    - /bin/cp -R images/. "$DEPLOYPATH/images/"
