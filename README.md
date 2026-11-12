@@ -2,8 +2,9 @@
 
 Landing page geral da Clínica Supreme (Goiânia). Tarefa no 3ADS Flow: **[CLÍNICA SUPREME] LP GERAL**.
 
+- **Domínio final:** https://fullbodyexperience.com.br/
 - **Prévia pública:** https://atendimento3ads.github.io/lp-clinica-supreme/
-- **Status:** prévia de contato direto, sem indexação. A galeria de pacientes e o formulário de captura permanecem fora desta versão.
+- **Status:** versão de contato direto preparada para o domínio final. A galeria de pacientes e o formulário de captura permanecem fora desta versão.
 - **Página:** `index.html` (HTML + CSS + JS em arquivo único, sem framework). Imagens em `images/`.
 
 ## Fontes do conteúdo
@@ -28,7 +29,7 @@ Landing page geral da Clínica Supreme (Goiânia). Tarefa no 3ADS Flow: **[CLÍN
 - Nenhum formulário ou confirmação simulada aparece nesta prévia. A integração com planilha ainda não existe.
 - Os ajustes de copy estão aplicados: Supreme Day, reposição hormonal, Elleva Max e Xerf, dados dos médicos e da clínica. O card de harmonização indicado na tarefa foi removido.
 - As imagens de antes/depois seguem apenas no checkout local de preparação, sem envio ao GitHub, enquanto não houver autorização de uso dos pacientes e revisão clínica do conjunto.
-- O domínio oficial desta LP ainda não foi definido. Esta URL é o GitHub Pages do repositório.
+- O domínio final definido por Thiago é `fullbodyexperience.com.br`. O GitHub Pages continua como prévia e declara o domínio final como URL canônica.
 - Falta a Política de Privacidade aprovada pela clínica antes de ativar um formulário que colete dados.
 
 Desenvolvido por **3ADS**.
